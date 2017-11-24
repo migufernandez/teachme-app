@@ -4,24 +4,36 @@
 
 ## home
 
-What is a User: The user is whoever person that is looking for an additional support in any subject or idiom/language.
+What is a User: The user is whoever person that is looking for a tutor for additional support on any US high school subject.
 
-As a user, I wish a simple menu of application options so that I can easily find the type of teacher/instructor I am looking for. When I select subjects, I wish to be taken to a listing of subjects. When I select idioms, I wish to be taken to a listing of idioms.
-When I select an specific subject or idiom I am interested in, I wish to view the various teacher within that subject or idiom.
+As a user, I wish a simple menu of application options so that I can easily find the tutor I am looking for within a subject.
 
-## View Subjects
+When I select subjects, I wish to be taken to a listing of subjects.
 
-As a user I wish to see a list of subjects and been able to select each subject and see what teachers are within that subject.
+## View departments
 
-## View Idioms
+When I select departments, I wish to be taken to a listing of departments.
 
-As a user I wish to see a list of idioms and been able to select each idiom and see what teachers are within that idiom.
+## View subjects
+
+When I select a department, I wish to be taken to a list of subjects within that department.
+
+## View tutors
+
+When I select an specific subject I am interested in, I wish to view the various tutors within that subject.
+
+
+
+Ask a question to the user: Please let us know your ZIP CODE so we can get you to the closest tutor???
+
 
 ## Filter Subjects
 
-As a user I wish to be able to filter subject
+As a user I wish to be able to filter subjects. I wish to be able to filter two or more subjects and find a tutor with those specifications.
 
 ## View Subject
+
+As a user I wish to be able to see a subject and been able to search for a tutor within that subject and area code.
 
 ## Call Subject
 
