@@ -11,7 +11,15 @@ When I select an specific subject or idiom I am interested in, I wish to view th
 
 ## View Subjects
 
+As a user I wish to see a list of subjects and been able to select each subject and see what teachers are within that subject.
+
+## View Idioms
+
+As a user I wish to see a list of idioms and been able to select each idiom and see what teachers are within that idiom.
+
 ## Filter Subjects
+
+As a user I wish to be able to filter subject
 
 ## View Subject
 
