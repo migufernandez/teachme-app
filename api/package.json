@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "load": "node load-data.js",
+    "loadIndex": "node load-indexes.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
@@ -15,6 +17,8 @@
     "node-http-error": "^2.0.0",
     "nodemon": "^1.12.1",
     "pouchdb": "^6.3.4",
+    "pouchdb-adapter-http": "^6.3.4",
+    "pouchdb-core": "^6.3.4",
     "pouchdb-find": "^6.3.4",
     "ramda": "^0.25.0"
   },
