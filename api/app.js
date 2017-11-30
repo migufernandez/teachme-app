@@ -42,11 +42,12 @@ const postTutorRequiredFieldCheck = checkRequiredFields([
   'gender',
   'birthDate',
   'contact',
+  'shortDesc',
+  'linkedIn',
   'countryBirth',
   'currentLocation',
   'education',
-  'subject',
-  'department'
+  'subjects'
 ])
 
 const putTutorRequiredFieldCheck = checkRequiredFields([
@@ -57,15 +58,17 @@ const putTutorRequiredFieldCheck = checkRequiredFields([
   'gender',
   'birthDate',
   'contact',
+  'shortDesc',
+  'linkedIn',
   'countryBirth',
   'currentLocation',
   'education',
-  'subject',
-  'department'
+  'subjects'
 ])
 
 const postSubjectRequiredFieldCheck = checkRequiredFields([
   'subjectName',
+  'description',
   'department'
 ])
 
@@ -74,6 +77,7 @@ const putSubjectRequiredFieldCheck = checkRequiredFields([
   '_rev',
   'type',
   'subjectName',
+  'description',
   'department'
 ])
 
