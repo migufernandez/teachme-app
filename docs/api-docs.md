@@ -57,12 +57,12 @@ $ npm start
 
 ## POST /tutors
 
-Adds a tutor to the collection of tutors.  When adding a tutor the `name`, `gender`, `birthDate`, `contact`, `countryBirth`, `currentLocation`, `education`, `subject`, `department` are required fields.
+Adds a tutor to the collection of tutors.  When adding a tutor the `type`,`name`, `gender`, `birthDate`, `contact`, `shortDesc`, `linkedIn`, `countryBirth`, `currentLocation`, `education`, `subjects` are required fields.
 
 ** Sample Request **
 
   ```
-  POST /categories
+  POST /tutors
 
   {
     "type": "tutor",
@@ -73,20 +73,31 @@ Adds a tutor to the collection of tutors.  When adding a tutor the `name`, `gend
       "email": "tripott@gmail.com",
       "phone": "8434569874"
     },
+    "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+    "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
     "countryBirth": "united states",
     "currentLocation": {
-      "city": "mount pleasant",
-      "zipCode": 29464
+      "city": "savannah, GA",
+      "zipCode": 31302
     },
     "education": {
       "level": "masters degree in computer science",
       "institution": "university of georgia"
     },
-    "subject": [
-      "keyboarding",
-      "programming"
-    ],
-    "department": "computers"
+    "subjects": [
+      {
+        "name": "calculus",
+        "rate": "$15.00"
+      },
+      {
+        "name": "algebra",
+        "rate": "$19.00"
+      },
+      {
+        "name": "coding",
+        "rate": "$25.00"
+      }
+    ]
   }
   ```
 
@@ -114,37 +125,48 @@ GET /tutors/tutor_trip-ottinger
 
 ```
 {
-    "_id": "tutor_trip-ottinger",
-    "_rev": "14-778eeb36a4f3c03403d3b39c4e8df4da",
-    "type": "tutor",
-    "name": "trip ottinger",
-    "gender": "male",
-    "birthDate": "1979-02-15",
-    "contact": {
-        "email": "tripott@gmail.com",
-        "phone": "8434569874"
+  "_id": "tutor_trip-ottinger",
+  "_rev": "1-aed7b2b58ce6bcf16c053e64c37cce6b",
+  "type": "tutor",
+  "name": "trip ottinger",
+  "gender": "male",
+  "birthDate": "1979-02-15",
+  "contact": {
+    "email": "tripott@gmail.com",
+    "phone": "8434569874"
+  },
+  "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+  "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
+  "countryBirth": "united states",
+  "currentLocation": {
+    "city": "savannah, GA",
+    "zipCode": 31302
+  },
+  "education": {
+    "level": "masters degree in computer science",
+    "institution": "university of georgia"
+  },
+  "subjects": [
+    {
+      "name": "calculus",
+      "rate": "$15.00"
     },
-    "countryBirth": "united states",
-    "currentLocation": {
-        "city": "mount pleasant",
-        "zipCode": 29464
+    {
+      "name": "algebra",
+      "rate": "$19.00"
     },
-    "education": {
-        "level": "masters degree in computer science",
-        "institution": "university of georgia"
-    },
-    "subject": [
-        "keyboarding",
-        "programming"
-    ],
-    "department": "computers"
+    {
+      "name": "coding",
+      "rate": "$25.00"
+    }
+  ]
 }
 ```
 
 ## PUT /tutors/{id}
 
 Edits the tutor object. Only visible for admin
-Edits a tutor from the collection of tutors.  When adding a tutor the `_id`, `_rev`, `type`, `name`, `gender`, `birthDate`, `contact`, `countryBirth`, `currentLocation`, `education`, `subject`, `department` are required fields
+Edits a tutor from the collection of tutors.  When adding a tutor the `_id`, `_rev`, `type`, `name`, `gender`, `birthDate`, `contact`, `shortDesc`, `linkedIn`, `countryBirth`, `currentLocation`, `education` and `subjects` are required fields
 
 ** Sample Request **
 
@@ -152,30 +174,41 @@ Edits a tutor from the collection of tutors.  When adding a tutor the `_id`, `_r
 PUT /tutors/tutor_trip-ottinger
 
 {
-    "_id": "tutor_trip-ottinger",
-    "_rev": "14-778eeb36a4f3c03403d3b39c4e8df4da",
-    "type": "tutor",
-    "name": "trip ottinger",
-    "gender": "male",
-    "birthDate": "1979-02-15",
-    "contact": {
-        "email": "tripott@gmail.com",
-        "phone": "8434569874"
+  "_id": "tutor_trip-ottinger",
+  "_rev": "1-aed7b2b58ce6bcf16c053e64c37cce6b",
+  "type": "tutor",
+  "name": "trip ottinger",
+  "gender": "male",
+  "birthDate": "1979-02-15",
+  "contact": {
+    "email": "tripott@gmail.com",
+    "phone": "8434569874"
+  },
+  "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+  "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
+  "countryBirth": "united states",
+  "currentLocation": {
+    "city": "savannah, GA",
+    "zipCode": 31302
+  },
+  "education": {
+    "level": "masters degree in computer science",
+    "institution": "university of georgia"
+  },
+  "subjects": [
+    {
+      "name": "calculus",
+      "rate": "$15.00"
     },
-    "countryBirth": "united states",
-    "currentLocation": {
-        "city": "mount pleasant",
-        "zipCode": 29464
+    {
+      "name": "algebra",
+      "rate": "$19.00"
     },
-    "education": {
-        "level": "masters degree in computer science",
-        "institution": "university of georgia"
-    },
-    "subject": [
-        "keyboarding",
-        "programming"
-    ],
-    "department": "computers"
+    {
+      "name": "coding",
+      "rate": "$25.00"
+    }
+  ]
 }
 ```
 
@@ -185,7 +218,7 @@ PUT /tutors/tutor_trip-ottinger
 {
     "ok": true,
     "id": "tutor_trip-ottinger",
-    "rev": "4-928c97d3e1b0865fa2df18270944df85"
+    "rev": "15-928c97d3e1b0865fa2df18270944df85"
 }
 ```
 
@@ -222,57 +255,75 @@ GET /tutors
 ```
 [
 {
-      "_id": "tutor_tom-wilson",
-      "_rev": "9-a07d735a18a250935f7ebb4a0f3a6673",
-      "type": "tutor",
-      "name": "tom wilson",
-      "gender": "male",
-      "birthDate": "1979-03-16",
-      "contact": {
-          "email": "tomwilson@gmail.com",
-          "phone": "8435769087"
-      },
-      "countryBirth": "united states",
-      "currentLocation": {
-          "city": "mount pleasant",
-          "zipCode": 29464
-      },
-      "education": {
-          "level": "masters degree in computer science",
-          "institution": "georgia tech"
-      },
-      "subject": [
-          "keyboarding",
-          "programming"
-      ],
-      "department": "computers"
+  "_id": "tutor_trip-ottinger",
+  "_rev": "1-aed7b2b58ce6bcf16c053e64c37cce6b",
+  "type": "tutor",
+  "name": "trip ottinger",
+  "gender": "male",
+  "birthDate": "1979-02-15",
+  "contact": {
+    "email": "tripott@gmail.com",
+    "phone": "8434569874"
   },
-  {
-      "_id": "tutor_trip-ottinger",
-      "_rev": "14-778eeb36a4f3c03403d3b39c4e8df4da",
-      "type": "tutor",
-      "name": "trip ottinger",
-      "gender": "male",
-      "birthDate": "1979-02-15",
-      "contact": {
-          "email": "tripott@gmail.com",
-          "phone": "8434569874"
-      },
-      "countryBirth": "united states",
-      "currentLocation": {
-          "city": "mount pleasant",
-          "zipCode": 29464
-      },
-      "education": {
-          "level": "masters degree in computer science",
-          "institution": "university of georgia"
-      },
-      "subject": [
-          "keyboarding",
-          "programming"
-      ],
-      "department": "computers"
-  },...
+  "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+  "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
+  "countryBirth": "united states",
+  "currentLocation": {
+    "city": "savannah, GA",
+    "zipCode": 31302
+  },
+  "education": {
+    "level": "masters degree in computer science",
+    "institution": "university of georgia"
+  },
+  "subjects": [
+    {
+      "name": "calculus",
+      "rate": "$15.00"
+    },
+    {
+      "name": "algebra",
+      "rate": "$19.00"
+    },
+    {
+      "name": "coding",
+      "rate": "$25.00"
+    }
+  ]
+},
+{
+  "_id": "tutor_cam-montgomery",
+  "_rev": "1-d62c545e77645ae887047a187d6ccb47",
+  "type": "tutor",
+  "name": "cam montgomery",
+  "gender": "male",
+  "birthDate": "1990-11-29",
+  "contact": {
+    "email": "camontgomery@gmail.com",
+    "phone": "8435873450"
+  },
+  "sorthDesc": "Hi, my name is Cam Montgomery and I am a student of bio physics at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is calculus but I can also teach algebra and arithmetic",
+  "linkedIn": "https://www.linkedin.com/in/cam-montgomery-30492432/",
+  "countryBirth": "united states",
+  "currentLocation": {
+    "city": "mount pleasant, SC",
+    "zipCode": 29464
+  },
+  "education": {
+    "level": "masters degree in computer science",
+    "institution": "university of georgia"
+  },
+  "subjects": [
+    {
+      "name": "calculus",
+      "rate": "$15.00"
+    },
+    {
+      "name": "algebra",
+      "rate": "$19.00"
+    }
+  ]
+},...
 ]
 ```
 
@@ -281,11 +332,11 @@ GET /tutors
 
 
 
-## subjects
+## Subjects
 
 ## POST /subjects
 
-Adds a subject to the collection of subjects.  When adding a subject the `subjectName` and `department` are required fields.
+Adds a subject to the collection of subjects.  When adding a subject the `subjectName`, `description`, `type` and `department` are required fields.
 
 ** Sample Request **
 
@@ -294,6 +345,7 @@ Adds a subject to the collection of subjects.  When adding a subject the `subjec
 
   {
     "subjectName": "algebra",
+    "description": "the branch of mathematics that deals with general statements of relations, utilizing letters and other symbols to represent specific sets of numbers, values, vectors, etc., in the description of such relations.",
     "type": "subject",
     "department": "math"
   }
@@ -325,16 +377,18 @@ GET /subjects
 ```
 [
 {
-"_id": "subject_algebra",
-"_rev": "2-98ee8b163060309fd3c15141e57d1162",
-"subjectName": "algebra",
-"type": "subject",
-"department": "math"
+  "_id": "subject_algebra",
+  "_rev": "1-87aa5358d6dfc1f0c39cc3a116a2cbb4",
+  "subjectName": "algebra",
+  "description": "the branch of mathematics that deals with general statements of relations, utilizing letters and other symbols to represent specific sets of numbers, values, vectors, etc., in the description of such relations.",
+  "type": "subject",
+  "department": "math"
 },
 {
   "_id": "subject_calculus",
-  "_rev": "2-98ee8b163060309fd3c15141e57d1163",
+  "_rev": "1-5f1fcae5ba73721b88c78256e1de8340",
   "subjectName": "calculus",
+  "description": "a method of calculation, especially one of several highly systematic methods of treating problems by a special system of algebraic notations, as differential or integral calculus.",
   "type": "subject",
   "department": "math"
 }, ...
@@ -355,11 +409,12 @@ GET /subjects/subject_algebra
 
 ```
 {
-"_id": "subject_algebra",
-"_rev": "2-98ee8b163060309fd3c15141e57d1162",
-"subjectName": "algebra",
-"type": "subject",
-"department": "math"
+  "_id": "subject_calculus",
+  "_rev": "1-5f1fcae5ba73721b88c78256e1de8340",
+  "subjectName": "calculus",
+  "description": "a method of calculation, especially one of several highly systematic methods of treating problems by a special system of algebraic notations, as differential or integral calculus.",
+  "type": "subject",
+  "department": "math"
 }
 ```
 
@@ -378,16 +433,18 @@ GET /subjects?filter=department:math
 ```
 [
 {
-"_id": "subject_algebra",
-"_rev": "2-98ee8b163060309fd3c15141e57d1162",
-"subjectName": "algebra",
-"type": "subject",
-"department": "math"
+  "_id": "subject_algebra",
+  "_rev": "1-87aa5358d6dfc1f0c39cc3a116a2cbb4",
+  "subjectName": "algebra",
+  "description": "the branch of mathematics that deals with general statements of relations, utilizing letters and other symbols to represent specific sets of numbers, values, vectors, etc., in the description of such relations.",
+  "type": "subject",
+  "department": "math"
 },
 {
   "_id": "subject_calculus",
-  "_rev": "2-98ee8b163060309fd3c15141e57d1163",
+  "_rev": "1-5f1fcae5ba73721b88c78256e1de8340",
   "subjectName": "calculus",
+  "description": "a method of calculation, especially one of several highly systematic methods of treating problems by a special system of algebraic notations, as differential or integral calculus.",
   "type": "subject",
   "department": "math"
 }, ...
@@ -407,8 +464,9 @@ PUT /subjects/:id
 
 {
   "_id": "subject_calculus",
-  "_rev": "2-98ee8b163060309fd3c15141e57d1163",
+  "_rev": "1-5f1fcae5ba73721b88c78256e1de8340",
   "subjectName": "calculus",
+  "description": "a method of calculation, especially one of several highly systematic methods of treating problems by a special system of algebraic notations, as differential or integral calculus.",
   "type": "subject",
   "department": "math"
 }

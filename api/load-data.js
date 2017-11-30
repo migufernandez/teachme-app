@@ -50,7 +50,6 @@ db.bulkDocs([
     },
     sorthDesc:
       'Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
-    startingRate: '$15.00',
     linkedIn: 'https://www.linkedin.com/in/trip-ottinger-8b465a5/',
     countryBirth: 'united states',
     currentLocation: {
