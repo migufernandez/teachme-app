@@ -2,9 +2,11 @@
 
 [home](../readme.md)
 
-## home
+## User
 
-What is a User: The user is whoever person that is looking for a tutor for additional support on any US high school subject.
+The user is whoever person that is looking for a tutor for the purpose of getting additional support to a high school student on any subject.
+
+## home
 
 As a user, I wish a simple menu of application options so that I can easily find the tutor I am looking for within a subject.
 

@@ -4,9 +4,7 @@
 
 ## Tutors
 
-- Miguel Fernandez
 - Trip Ottinger
-- Cam Montgomery
 
 ### Tutor Document Example
 
@@ -52,6 +50,8 @@
 
 
 ## subjects
+
+- Algebra
 
 ### subject Document Example
 

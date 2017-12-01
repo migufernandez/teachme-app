@@ -2,7 +2,7 @@
 
 An API to manage tutors and US high school subjects.
 
-[home](../readme.md)
+[home](../README.md)
 
 ## Getting Started
 
@@ -327,10 +327,6 @@ GET /tutors
 ]
 ```
 
-[home](../readme.md)
-
-
-
 
 ## Subjects
 
@@ -503,3 +499,7 @@ DELETE /subjects/subject_algebra
   }
 ]
 ```
+
+
+
+[home](../readme.md)

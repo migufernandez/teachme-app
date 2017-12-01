@@ -1,6 +1,6 @@
-# teachme-app
+# tutorme-app
 
-TeachMe Web App
+tutorMe Web App
 
 - [User Stories](./docs/user-stories.md)
 - [Wireframes](./docs/wireframes.md)
