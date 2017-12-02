@@ -502,4 +502,4 @@ DELETE /subjects/subject_algebra
 
 
 
-[home](../readme.md)
+[home](../README.md)

@@ -1,6 +1,6 @@
 # Database
 
-[home](../readme.md)
+[home](../README.md)
 
 ## Tutors
 
@@ -66,4 +66,4 @@
   }
   ```
 
-[home](../readme.md)
+[home](../README.md)

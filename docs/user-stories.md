@@ -1,16 +1,14 @@
 # User Stories
 
-[home](../readme.md)
+[home](../README.md)
 
 ## User
 
 The user is whoever person that is looking for a tutor for the purpose of getting additional support to a high school student on any subject.
 
-## home
+## Home
 
-As a user, I wish a simple menu of application options so that I can easily find the tutor I am looking for within a subject.
-
-When I select subjects, I wish to be taken to a listing of subjects.
+As a user, I wish a simple menu of application options so that I can easily find a list of tutors, departments or subjects. As a user I would also like to be driven through a sequence in order to find the right tutors for my needs and in my area.
 
 ## View departments
 
@@ -18,24 +16,24 @@ When I select departments, I wish to be taken to a listing of departments.
 
 ## View subjects
 
-When I select a department, I wish to be taken to a list of subjects within that department.
+When I select a department,  wish to be taken to a listing of subjects with in that department. (grid list)
+
+## View a subject
+
+When I select a subject, I wish to be taken to the card description of that specific subject. I would also like to select a button (view tutors in your area) to see the tutors that can teach that subject in my area.
 
 ## View tutors
 
-When I select an specific subject I am interested in, I wish to view the various tutors within that subject.
+When I select view tutors in your area, I wish to be taken to a listing of tutors.
 
+## View a tutor
 
-
-Ask a question to the user: Please let us know your ZIP CODE so we can get you to the closest tutor???
+When I select a tutor, I wish to be taken to a tutor profile. I wish to see their Bio, price per hour and contact information. I also wish to contact them directly via email, sms or phone call.
 
 
 ## Filter Subjects
 
-As a user I wish to be able to filter subjects. I wish to be able to filter two or more subjects and find a tutor with those specifications.
-
 ## View Subject
-
-As a user I wish to be able to see a subject and been able to search for a tutor within that subject and area code.
 
 ## Call Subject
 
@@ -43,4 +41,4 @@ As a user I wish to be able to see a subject and been able to search for a tutor
 
 ## View Subject FAQ
 
-[home](../readme.md)
+[home](../README.md)
