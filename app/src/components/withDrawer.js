@@ -39,9 +39,9 @@ const sideList = (
           </ListItemIcon>
         </ListItem>
       </Link>
-      <Link to="/for-tutors" className="router-link">
+      <Link to="/tutors" className="router-link">
         <ListItem button>
-          <ListItemText primary="For Tutors" />
+          <ListItemText primary="Tutors" />
           <ListItemIcon>
             <TrendingFlatIcon />
           </ListItemIcon>

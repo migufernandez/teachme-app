@@ -7,12 +7,11 @@ import BottomNavigation, {
 import RestoreIcon from 'material-ui-icons/Restore'
 import FavoriteIcon from 'material-ui-icons/Favorite'
 import LocationOnIcon from 'material-ui-icons/LocationOn'
-
-const styles = {
-  root: {
-    width: 500
-  }
-}
+import HomeIcon from 'material-ui-icons/Home'
+import FaceIcon from 'material-ui-icons/Face'
+import RecordVoiceOverIcon from 'material-ui-icons/RecordVoiceOver'
+import FolderIcon from 'material-ui-icons/Folder'
+import BookmarkIcon from 'material-ui-icons/Bookmark'
 
 class SimpleBottomNavigation extends React.Component {
   state = {
@@ -32,11 +31,13 @@ class SimpleBottomNavigation extends React.Component {
         value={value}
         onChange={this.handleChange}
         showLabels
-        className={classes.root}
+        style={{ position: 'fixed', bottom: '0' }}
       >
-        <BottomNavigationButton label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationButton label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationButton label="Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationButton label="Home" icon={<HomeIcon />} />
+        <BottomNavigationButton label="Departments" icon={<FolderIcon />} />
+        <BottomNavigationButton label="Subjects" icon={<BookmarkIcon />} />
+        <BottomNavigationButton label="Tutors" icon={<RecordVoiceOverIcon />} />
+        <BottomNavigationButton label="LogIn" icon={<FaceIcon />} />
       </BottomNavigation>
     )
   }
@@ -46,4 +47,4 @@ SimpleBottomNavigation.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(SimpleBottomNavigation)
+export default SimpleBottomNavigation
