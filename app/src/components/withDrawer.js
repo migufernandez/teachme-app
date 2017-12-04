@@ -4,6 +4,7 @@ import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import InboxIcon from 'material-ui-icons/Inbox'
 import HomeIcon from 'material-ui-icons/Home'
+import TrendingFlatIcon from 'material-ui-icons/TrendingFlat'
 import HelpIcon from 'material-ui-icons/Help'
 import ViewList from 'material-ui-icons/ViewList'
 import FavoriteIcon from 'material-ui-icons/Favorite'
@@ -20,6 +21,38 @@ const sideList = (
             <HomeIcon />
           </ListItemIcon>
           <ListItemText primary="Home" />
+        </ListItem>
+      </Link>
+      <Link to="/departments" className="router-link">
+        <ListItem button>
+          <ListItemText primary="Departments" />
+          <ListItemIcon>
+            <TrendingFlatIcon />
+          </ListItemIcon>
+        </ListItem>
+      </Link>
+      <Link to="/subjects" className="router-link">
+        <ListItem button>
+          <ListItemText primary="Subjects" />
+          <ListItemIcon>
+            <TrendingFlatIcon />
+          </ListItemIcon>
+        </ListItem>
+      </Link>
+      <Link to="/for-tutors" className="router-link">
+        <ListItem button>
+          <ListItemText primary="For Tutors" />
+          <ListItemIcon>
+            <TrendingFlatIcon />
+          </ListItemIcon>
+        </ListItem>
+      </Link>
+      <Link to="/company" className="router-link">
+        <ListItem button>
+          <ListItemText primary="Company" />
+          <ListItemIcon>
+            <TrendingFlatIcon />
+          </ListItemIcon>
         </ListItem>
       </Link>
     </List>
