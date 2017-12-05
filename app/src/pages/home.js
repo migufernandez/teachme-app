@@ -22,7 +22,7 @@ class Home extends React.Component {
         <div
           style={{
             textAlign: 'center',
-            paddingTop: '50%',
+            paddingTop: '100%',
             backgroundImage: 'url(' + students + ')'
           }}
         >
