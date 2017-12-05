@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { filter, contains, map } from 'ramda'
 import List from 'material-ui/List'
 import { Button } from 'material-ui'
+import students from '../images/students.jpg'
 
 class Home extends React.Component {
   componentDidMount() {
@@ -18,7 +19,13 @@ class Home extends React.Component {
     return (
       <div>
         <MenuAppBar title="TutorMe" />
-        <div style={{ textAlign: 'center', paddingTop: '50%' }}>
+        <div
+          style={{
+            textAlign: 'center',
+            paddingTop: '50%',
+            backgroundImage: 'url(' + students + ')'
+          }}
+        >
           <Button raised>GET STARTED</Button>
         </div>
         <SimpleBottomNavigation />
