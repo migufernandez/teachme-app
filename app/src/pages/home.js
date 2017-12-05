@@ -5,6 +5,7 @@ import SimpleBottomNavigation from '../components/bottomNavigation'
 import { connect } from 'react-redux'
 import { filter, contains, map } from 'ramda'
 import List from 'material-ui/List'
+import { Button } from 'material-ui'
 
 class Home extends React.Component {
   componentDidMount() {
@@ -17,7 +18,9 @@ class Home extends React.Component {
     return (
       <div>
         <MenuAppBar title="TutorMe" />
-        <h1>Home</h1>
+        <div style={{ textAlign: 'center', paddingTop: '50%' }}>
+          <Button raised>GET STARTED</Button>
+        </div>
         <SimpleBottomNavigation />
       </div>
     )

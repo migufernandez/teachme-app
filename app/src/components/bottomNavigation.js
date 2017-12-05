@@ -31,7 +31,7 @@ class SimpleBottomNavigation extends React.Component {
         value={value}
         onChange={this.handleChange}
         showLabels
-        style={{ position: 'fixed', bottom: '0' }}
+        style={{ position: 'fixed', bottom: '0', width: '100%' }}
       >
         <BottomNavigationButton label="Home" icon={<HomeIcon />} />
         <BottomNavigationButton label="Departments" icon={<FolderIcon />} />
