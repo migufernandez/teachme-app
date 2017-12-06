@@ -7,7 +7,7 @@ import Subheader from 'material-ui/List/ListSubheader'
 // import InfoIcon from 'material-ui-icons/Info'
 
 import { connect } from 'react-redux'
-import { propOr, compose, uniq, map } from 'ramda'
+import { map, propOr } from 'ramda'
 import { setSubjects, setSubjectFilter } from '../../action-creators/subjects'
 
 //import SubjectGridListTile from '../../component/subjectGridListTile'
@@ -26,14 +26,13 @@ const styles = theme => ({
   }
 })
 
-class Departments extends React.Component {
+class Subjects extends React.Component {
   componentDidMount() {
     this.props.onMount()
   }
   render() {
     const { classes } = this.props
     const subjects = propOr([], 'subjects', this.props)
-    const departments = compose(uniq(), map(s => s.department))(subjects)
     return (
       <div className={classes.container}>
         <GridList cellHeight={180} className={classes.gridList}>
@@ -41,21 +40,21 @@ class Departments extends React.Component {
             <Subheader component="div">{this.props.title}</Subheader>
           </GridListTile>
           {map(
-            department => (
+            subject => (
               <GridListTile
-                key={department}
+                key={subject._id}
                 onClick={e => {
-                  this.props.history.push(`/subjects`)
+                  this.props.history.push(`/subjects/${subject._id}`)
                 }}
               >
                 <img
                   src="https://s3.amazonaws.com/kajabi-storefronts-production/site/1823/images/3e0gOCzHT3qHKQXmjPw2_algebra_gre.jpg"
-                  alt={department}
+                  alt={subject.subjectName}
                 />
-                <GridListTileBar title={department} />
+                <GridListTileBar title={subject.subjectName} />
               </GridListTile>
             ),
-            departments
+            subjects
           )}
         </GridList>
       </div>
@@ -63,7 +62,7 @@ class Departments extends React.Component {
   }
 }
 
-Departments.propTypes = {
+Subjects.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
@@ -77,10 +76,11 @@ const mapActionsToProps = dispatch => {
     onMount: () => {
       console.log('onMount')
       dispatch(setSubjects)
-    }
+    },
+    setSubjectFilter: id => dispatch(setSubjectFilter(id))
   }
 }
 
 const connector = connect(mapStateToProps, mapActionsToProps)
 
-export default withStyles(styles)(connector(Departments))
+export default withStyles(styles)(connector(Subjects))

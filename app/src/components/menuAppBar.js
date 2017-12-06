@@ -1,5 +1,4 @@
 import React from 'react'
-import { withStyles } from 'material-ui/styles'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import { Typography } from 'material-ui'
@@ -9,27 +8,27 @@ import GoBackIcon from 'material-ui-icons/KeyboardArrowLeft'
 import SearchIcon from 'material-ui-icons/Search'
 
 import { connect } from 'react-redux'
-import { propOr, isNil } from 'ramda'
+import { propOr } from 'ramda'
 
-const styles = theme => ({
-  root: {
-    width: '100%'
-  },
-  flex: {
-    flex: 1
-  },
-  firstButton: {
-    marginLeft: -12,
-    marginRight: 12
-  },
-  lastButton: {
-    marginLeft: 12,
-    marginRight: -12
-  }
-})
+// const styles = theme => ({
+//   root: {
+//     width: '100%'
+//   },
+//   flex: {
+//     flex: 1
+//   },
+//   firstButton: {
+//     marginLeft: -12,
+//     marginRight: 12
+//   },
+//   lastButton: {
+//     marginLeft: 12,
+//     marginRight: -12
+//   }
+// })
 
 const MenuAppBar = props => {
-  const { classes } = props
+  // const { classes } = props
   const secondaryMenu = propOr(null, 'secondaryMenu', props)
   return (
     <div>

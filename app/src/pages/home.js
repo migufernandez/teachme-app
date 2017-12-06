@@ -3,8 +3,6 @@ import MenuAppBar from '../components/menuAppBar'
 import withDrawer from '../components/withDrawer'
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import { connect } from 'react-redux'
-import { filter, contains, map } from 'ramda'
-import List from 'material-ui/List'
 import { Button } from 'material-ui'
 import students from '../images/students.jpg'
 

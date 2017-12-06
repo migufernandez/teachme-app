@@ -1,12 +1,10 @@
 import React from 'react'
-import { Button } from 'material-ui'
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import withDrawer from '../components/withDrawer'
 import MenuAppBar from '../components/menuAppBar'
 import PaperSheet from '../components/paperSheet'
 import { connect } from 'react-redux'
 import { CardMedia } from 'material-ui/Card'
-import { Link } from 'react-router-dom'
 import background from '../images/background.jpg'
 
 const companyText = [

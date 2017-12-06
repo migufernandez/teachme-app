@@ -14,4 +14,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
+//store.dispatch(setSubjects)
+
 registerServiceWorker()
