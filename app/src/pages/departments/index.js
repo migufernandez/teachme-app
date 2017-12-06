@@ -24,8 +24,8 @@ const styles = theme => ({
     background: theme.palette.background.paper
   },
   gridList: {
-    width: 500,
-    height: 450
+    width: 'auto',
+    height: 'auto'
   }
 })
 
