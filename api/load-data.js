@@ -76,6 +76,220 @@ db.bulkDocs([
     ]
   },
   {
+    _id: 'tutor_tom-wilson',
+    type: 'tutor',
+    name: 'tom wilson',
+    gender: 'male',
+    birthDate: '1982-03-13',
+    contact: {
+      email: 'tomwilson@gmail.com',
+      phone: '8436749874'
+    },
+    sorthDesc:
+      'Hi, my name is Tom Wilson and I am a student of computer science at Georgia Tech. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
+    linkedIn: 'https://www.linkedin.com/in/twilson63/',
+    countryBirth: 'united states',
+    currentLocation: {
+      city: 'Mount Pleasant, SC',
+      zipCode: 29464
+    },
+    education: {
+      level: 'masters degree in computer science',
+      institution: 'Georgia Tech'
+    },
+    subjects: [
+      {
+        name: 'design',
+        rate: '$15.00'
+      },
+      {
+        name: 'keyboarding',
+        rate: '$19.00'
+      },
+      {
+        name: 'coding',
+        rate: '$25.00'
+      }
+    ]
+  },
+  {
+    _id: 'tutor_currey-thomas',
+    type: 'tutor',
+    name: 'currey thomas',
+    gender: 'male',
+    birthDate: '1992-10-20',
+    contact: {
+      email: 'curreythomas@gmail.com',
+      phone: '8436308745'
+    },
+    sorthDesc:
+      'Hi, my name is Currey Thomas and I am a student of computer science at Michigan University. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
+    linkedIn: 'https://www.linkedin.com/in/curreythomas/',
+    countryBirth: 'united states',
+    currentLocation: {
+      city: 'Grand Rapids, MI',
+      zipCode: 49501
+    },
+    education: {
+      level: 'masters degree in finance',
+      institution: 'Michigan University'
+    },
+    subjects: [
+      {
+        name: 'calculus',
+        rate: '$15.00'
+      },
+      {
+        name: 'algebra',
+        rate: '$19.00'
+      },
+      {
+        name: 'statistics',
+        rate: '$25.00'
+      }
+    ]
+  },
+  {
+    _id: 'tutor_jeff-montgomery',
+    type: 'tutor',
+    name: 'jeff montgomery',
+    gender: 'male',
+    birthDate: '1984-09-22',
+    contact: {
+      email: 'jeffmontgomery@gmail.com',
+      phone: '8434569874'
+    },
+    sorthDesc:
+      'Hi, my name is jeff Montgomery and I am a student of biology at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is biology but I can also teach physics and zoology',
+    linkedIn: 'https://www.linkedin.com/in/jeffmonty/',
+    countryBirth: 'united states',
+    currentLocation: {
+      city: 'savannah, GA',
+      zipCode: 31302
+    },
+    education: {
+      level: 'masters degree in biology',
+      institution: 'university of georgia'
+    },
+    subjects: [
+      {
+        name: 'biology',
+        rate: '$19.00'
+      },
+      {
+        name: 'physics',
+        rate: '$28.00'
+      },
+      {
+        name: 'zoology',
+        rate: '$16.00'
+      }
+    ]
+  },
+  {
+    _id: 'tutor_bill-joy',
+    type: 'tutor',
+    name: 'Bill Joy',
+    gender: 'male',
+    birthDate: '1979-07-03',
+    contact: {
+      email: 'billjoy@gmail.com',
+      phone: '8432943300'
+    },
+    sorthDesc:
+      'Hi, my name is Bill Joy and I am a student of computer science at University of Dallas. I have the passion and motivation to teach any high school student. My strongest skill is Philosophy but I can also teach Sociology and health',
+    linkedIn: 'https://www.linkedin.com/in/billjoy/',
+    countryBirth: 'united states',
+    currentLocation: {
+      city: 'dallas, TX',
+      zipCode: 75001
+    },
+    education: {
+      level: 'masters degree in Philosophy',
+      institution: 'university of dallas'
+    },
+    subjects: [
+      {
+        name: 'Philosophy',
+        rate: '$18.00'
+      },
+      {
+        name: 'Sociology',
+        rate: '$15.00'
+      },
+      {
+        name: 'Health',
+        rate: '$22.00'
+      }
+    ]
+  },
+  {
+    _id: 'tutor_james-driscoll',
+    type: 'tutor',
+    name: 'James Driscoll',
+    gender: 'male',
+    birthDate: '1993-01-10',
+    contact: {
+      email: 'jamesdriscoll@gmail.com',
+      phone: '8434563987'
+    },
+    sorthDesc:
+      'Hi, my name is James Driscoll and I am a student of computer science at College of Charleston. I have the passion and motivation to teach any high school student. My strongest skill is programming.',
+    linkedIn: 'https://www.linkedin.com/in/jjdii/',
+    countryBirth: 'united states',
+    currentLocation: {
+      city: 'Charleston, SC',
+      zipCode: 29466
+    },
+    education: {
+      level: 'masters degree in computer science',
+      institution: 'College of Charleston'
+    },
+    subjects: [
+      {
+        name: 'programming',
+        rate: '$26.00'
+      }
+    ]
+  },
+  {
+    _id: 'tutor_miguel-fernandez',
+    type: 'tutor',
+    name: 'miguel fernandez',
+    gender: 'male',
+    birthDate: '1989-06-10',
+    contact: {
+      email: 'mfernandezsaenz@gmail.com',
+      phone: '8433037112'
+    },
+    sorthDesc:
+      'Hi, my name is Miguel Fernandez and I am a student of Business Administration at University of Navarra. I have the passion and motivation to teach any high school student. My strongest skill is coding but I can also teach geometry and statistics',
+    linkedIn: 'https://www.linkedin.com/in/mfernandezsaenz/',
+    countryBirth: 'spain',
+    currentLocation: {
+      city: 'Mount Pleasant, SC',
+      zipCode: 29464
+    },
+    education: {
+      level: 'masters degree in Business Administration',
+      institution: 'university of Navarra'
+    },
+    subjects: [
+      {
+        name: 'geometry',
+        rate: '$15.00'
+      },
+      {
+        name: 'statistics',
+        rate: '$19.00'
+      },
+      {
+        name: 'coding',
+        rate: '$25.00'
+      }
+    ]
+  },
+  {
     _id: 'subject_algebra',
     subjectName: 'algebra',
     description:
@@ -296,5 +510,60 @@ db.bulkDocs([
       'Videography refers to the process of capturing moving images on electronic media (e.g., videotape, direct to disk recording, or solid state storage) and even streaming media.',
     type: 'subject',
     department: 'applied arts'
+  },
+  {
+    _id: 'subject_sociology',
+    subjectName: 'Sociology',
+    description:
+      'Sociology is the scientific study of society, including patterns of social relationships, social interaction, and culture.',
+    type: 'subject',
+    department: 'social studies'
+  },
+  {
+    _id: 'subject_psychology',
+    subjectName: 'Psychology',
+    description:
+      'Psychology is the science of behavior and mind, embracing all aspects of conscious and unconscious experience as well as thought.',
+    type: 'subject',
+    department: 'social studies'
+  },
+  {
+    _id: 'subject_anthropology',
+    subjectName: 'Anthropology',
+    description:
+      'Anthropology is the study of various aspects of humans within past and present societies.',
+    type: 'subject',
+    department: 'social studies'
+  },
+  {
+    _id: 'subject_philosophy',
+    subjectName: 'Philosophy',
+    description:
+      'Philosophy is the study of general and fundamental problems concerning matters such as existence, knowledge, values, reason, mind, and language.',
+    type: 'subject',
+    department: 'social studies'
+  },
+  {
+    _id: 'subject_basic-first-aid-and-safety',
+    subjectName: 'Basic First Aid and Safety',
+    description: 'studies on injury prevention and first aid skills',
+    type: 'subject',
+    department: 'health'
+  },
+  {
+    _id: 'subject_nutrition',
+    subjectName: 'Nutrition',
+    description:
+      'Nutrition is the science that interprets the interaction of nutrients and other substances in food in relation to maintenance, growth, reproduction, health and disease of an organism.',
+    type: 'subject',
+    department: 'health'
+  },
+  {
+    _id: 'subject_health',
+    subjectName: 'Health',
+    description:
+      'the study and research of the food that we eat and the study and research of health-related issues to understand how humans (and animals) function, and the application of that knowledge to improve health and to prevent and cure diseases.',
+    type: 'subject',
+    department: 'health'
   }
 ])
