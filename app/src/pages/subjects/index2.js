@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import { GridList, GridListTile, GridListTileBar } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
+import SimpleBottomNavigation from '../../components/bottomNavigation'
+import MenuAppBar from '../../components/menuAppBar'
+import withDrawer from '../../components/withDrawer'
 // import IconButton from 'material-ui/IconButton'
 // import InfoIcon from 'material-ui-icons/Info'
 
@@ -35,6 +38,7 @@ class Subjects extends React.Component {
     const subjects = propOr([], 'subjects', this.props)
     return (
       <div className={classes.container}>
+        <MenuAppBar title="TutorMe" />
         <GridList cellHeight={180} className={classes.gridList}>
           <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
             <Subheader component="div">{this.props.title}</Subheader>
@@ -57,6 +61,7 @@ class Subjects extends React.Component {
             subjects
           )}
         </GridList>
+        <SimpleBottomNavigation />
       </div>
     )
   }
@@ -83,4 +88,4 @@ const mapActionsToProps = dispatch => {
 
 const connector = connect(mapStateToProps, mapActionsToProps)
 
-export default withStyles(styles)(connector(Subjects))
+export default withStyles(styles)(withDrawer(connector(Subjects)))

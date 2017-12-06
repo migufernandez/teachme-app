@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import { GridList, GridListTile, GridListTileBar } from 'material-ui/GridList'
 import Subheader from 'material-ui/List/ListSubheader'
+import SimpleBottomNavigation from '../../components/bottomNavigation'
+import MenuAppBar from '../../components/menuAppBar'
+import withDrawer from '../../components/withDrawer'
 // import IconButton from 'material-ui/IconButton'
 // import InfoIcon from 'material-ui-icons/Info'
 
@@ -32,13 +35,15 @@ class Departments extends React.Component {
   }
   render() {
     const { classes } = this.props
+    console.log('THIS', this.props)
     const subjects = propOr([], 'subjects', this.props)
     const departments = compose(uniq(), map(s => s.department))(subjects)
     return (
       <div className={classes.container}>
+        <MenuAppBar title="TutorMe" />
         <GridList cellHeight={180} className={classes.gridList}>
           <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-            <Subheader component="div">{this.props.title}</Subheader>
+            <Subheader component="div">{'Departments'}</Subheader>
           </GridListTile>
           {map(
             department => (
@@ -58,6 +63,7 @@ class Departments extends React.Component {
             departments
           )}
         </GridList>
+        <SimpleBottomNavigation />
       </div>
     )
   }
@@ -83,4 +89,4 @@ const mapActionsToProps = dispatch => {
 
 const connector = connect(mapStateToProps, mapActionsToProps)
 
-export default withStyles(styles)(connector(Departments))
+export default withStyles(styles)(withDrawer(connector(Departments)))
