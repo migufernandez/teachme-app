@@ -5,6 +5,7 @@ import Company from './pages/company'
 import Subjects from './pages/subjects/index2'
 import Departments from './pages/departments'
 import ShowSubject from './pages/subjects/show'
+import Tutors from './pages/tutors/index'
 
 import history from './history'
 
@@ -23,6 +24,7 @@ const App = props => {
             path="/subjects/department/:department"
             component={Subjects}
           />
+          <Route exact path="/tutors" component={Tutors} />
         </Switch>
       </div>
     </Router>

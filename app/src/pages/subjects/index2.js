@@ -49,8 +49,6 @@ class Subjects extends React.Component {
         ? subjects
         : filter(s => s.department === filterByDept, subjects)
 
-    //
-
     return (
       <div className={classes.container}>
         <MenuAppBar title="TutorMe" />

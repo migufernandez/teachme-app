@@ -1,11 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { drawer } from './reducers/drawer'
-import {
-  subjects,
-  currentSubject,
-  subjectListTitle
-  // subjectFilter
-} from './reducers/subjects'
+import { subjects, currentSubject, subjectListTitle } from './reducers/subjects'
+import { tutors } from './reducers/tutors'
 
 import thunk from 'redux-thunk'
 
@@ -14,12 +10,12 @@ const store = createStore(
     drawer,
     subjects,
     currentSubject,
-    subjectListTitle
-    // subjectFilter
+    subjectListTitle,
+    tutors
   }),
   applyMiddleware(thunk)
 )
 store.subscribe(() => {
-  //console.log('store.getState()', store.getState())
+  console.log('store.getState()', store.getState())
 })
 export default store
