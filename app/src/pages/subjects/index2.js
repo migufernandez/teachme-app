@@ -10,8 +10,8 @@ import withDrawer from '../../components/withDrawer'
 // import InfoIcon from 'material-ui-icons/Info'
 
 import { connect } from 'react-redux'
-import { map, propOr } from 'ramda'
-import { setSubjects, setSubjectFilter } from '../../action-creators/subjects'
+import { map, propOr, pathOr, filter } from 'ramda'
+import { setSubjects } from '../../action-creators/subjects'
 
 //import SubjectGridListTile from '../../component/subjectGridListTile'
 
@@ -31,11 +31,26 @@ const styles = theme => ({
 
 class Subjects extends React.Component {
   componentDidMount() {
-    this.props.onMount()
+    // this.props.onMount()
   }
   render() {
+    console.log('HERE IS THE SUBJECT PROPS', this.props)
     const { classes } = this.props
+
+    const filterByDept = pathOr(
+      'no filter',
+      ['match', 'params', 'department'],
+      this.props
+    )
+
     const subjects = propOr([], 'subjects', this.props)
+    const displayedSubjects =
+      filterByDept === 'no filter'
+        ? subjects
+        : filter(s => s.department === filterByDept, subjects)
+
+    //
+
     return (
       <div className={classes.container}>
         <MenuAppBar title="TutorMe" />
@@ -58,7 +73,7 @@ class Subjects extends React.Component {
                 <GridListTileBar title={subject.subjectName} />
               </GridListTile>
             ),
-            subjects
+            displayedSubjects
           )}
         </GridList>
         <SimpleBottomNavigation />
@@ -81,8 +96,7 @@ const mapActionsToProps = dispatch => {
     onMount: () => {
       console.log('onMount')
       dispatch(setSubjects)
-    },
-    setSubjectFilter: id => dispatch(setSubjectFilter(id))
+    }
   }
 }
 

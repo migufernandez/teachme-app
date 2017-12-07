@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { pathOr } from 'ramda'
 
 import { setCurrentSubject } from '../../action-creators/subjects'
-import subjectCard from '../../components/subjectCard'
+import SubjectCard from '../../components/subjectCard'
 
 class ShowSubject extends React.Component {
   state = { expanded: false }
@@ -18,16 +18,13 @@ class ShowSubject extends React.Component {
     this.setState({ expanded: !this.state.expanded })
   }
   render() {
-    const currentID = pathOr('', ['currentSubject', 'id'], this.props)
+    console.log('THIS', this.props)
+    const currentID = pathOr('', ['currentSubject', '_id'], this.props)
     if (this.props.match.params.id === currentID) {
       return (
         <div>
-          <MenuAppBar
-            title={this.props.currentSubject.name}
-            search={true}
-            goBack={'/subjects'}
-          />\
-          <subjectCard data={this.props.currentSubject} />
+          <MenuAppBar title="TutorMe" />
+          <SubjectCard />
         </div>
       )
     } else {
@@ -41,6 +38,7 @@ class ShowSubject extends React.Component {
 }
 
 const mapStateToProps = state => {
+  console.log('STATE', state)
   return {
     currentSubject: state.currentSubject
   }

@@ -15,9 +15,14 @@ const App = props => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/company" component={Company} />
-          <Route path="/subjects/:id" component={ShowSubject} />
+          <Route exact path="/subjects/:id" component={ShowSubject} />
           <Route exact path="/subjects" component={Subjects} />
           <Route path="/departments" component={Departments} />
+          <Route
+            exact
+            path="/subjects/department/:department"
+            component={Subjects}
+          />
         </Switch>
       </div>
     </Router>

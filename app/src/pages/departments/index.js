@@ -11,7 +11,7 @@ import withDrawer from '../../components/withDrawer'
 
 import { connect } from 'react-redux'
 import { propOr, compose, uniq, map } from 'ramda'
-import { setSubjects, setSubjectFilter } from '../../action-creators/subjects'
+import { setSubjects } from '../../action-creators/subjects'
 
 //import SubjectGridListTile from '../../component/subjectGridListTile'
 
@@ -35,7 +35,6 @@ class Departments extends React.Component {
   }
   render() {
     const { classes } = this.props
-    console.log('THIS', this.props)
     const subjects = propOr([], 'subjects', this.props)
     const departments = compose(uniq(), map(s => s.department))(subjects)
     return (
@@ -50,7 +49,7 @@ class Departments extends React.Component {
               <GridListTile
                 key={department}
                 onClick={e => {
-                  this.props.history.push(`/subjects`)
+                  this.props.history.push(`/subjects/department/${department}`)
                 }}
               >
                 <img

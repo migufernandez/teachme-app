@@ -1,8 +1,8 @@
 import {
   SET_SUBJECTS,
   SET_CURRENT_SUBJECT,
-  SET_TITLE,
-  SET_SUBJECT_FILTER
+  SET_TITLE
+  // SET_SUBJECT_FILTER
 } from '../constants'
 
 export const subjects = (state = [], action) => {
@@ -32,11 +32,11 @@ export const currentSubject = (state = {}, action) => {
   }
 }
 
-export const subjectFilter = (state = null, action) => {
-  switch (action.type) {
-    case SET_SUBJECT_FILTER:
-      return action.payload
-    default:
-      return state
-  }
-}
+// export const subjectFilter = (state = null, action) => {
+//   switch (action.type) {
+//     case SET_SUBJECT_FILTER:
+//       return action.payload
+//     default:
+//       return state
+//   }
+// }

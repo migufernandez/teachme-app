@@ -8,7 +8,7 @@ import students from '../images/students.jpg'
 
 class Home extends React.Component {
   componentDidMount() {
-    this.state = { open: false }
+    this.setState({ open: false })
   }
 
   handleChange = () => this.setState({ open: !this.state.open })

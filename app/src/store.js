@@ -3,8 +3,8 @@ import { drawer } from './reducers/drawer'
 import {
   subjects,
   currentSubject,
-  subjectListTitle,
-  subjectFilter
+  subjectListTitle
+  // subjectFilter
 } from './reducers/subjects'
 
 import thunk from 'redux-thunk'
@@ -14,8 +14,8 @@ const store = createStore(
     drawer,
     subjects,
     currentSubject,
-    subjectListTitle,
-    subjectFilter
+    subjectListTitle
+    // subjectFilter
   }),
   applyMiddleware(thunk)
 )
