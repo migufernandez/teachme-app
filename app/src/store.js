@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { drawer } from './reducers/drawer'
 import { subjects, currentSubject, subjectListTitle } from './reducers/subjects'
-import { tutors } from './reducers/tutors'
+import { tutors, currentTutor } from './reducers/tutors'
 
 import thunk from 'redux-thunk'
 
@@ -11,7 +11,8 @@ const store = createStore(
     subjects,
     currentSubject,
     subjectListTitle,
-    tutors
+    tutors,
+    currentTutor
   }),
   applyMiddleware(thunk)
 )
