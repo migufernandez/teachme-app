@@ -1,7 +1,17 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import { ListItem, ListItemText } from 'material-ui/List'
+import { ListItem, ListItemText, ListItemAvatar } from 'material-ui/List'
+import Avatar from 'material-ui/Avatar'
 import Divider from 'material-ui/Divider'
+import { compose, map, split, toLower, join, toUpper } from 'ramda'
+
+const firstLetterUpper = string =>
+  compose(
+    join(' '),
+    map(word => toUpper(word[0]) + word.substr(1)),
+    split(' '),
+    toLower()
+  )(string)
 
 const TutorItem = ({ tutor, history }) => {
   return (
@@ -12,11 +22,15 @@ const TutorItem = ({ tutor, history }) => {
           history.push(`/tutors/${tutor._id}`)
         }}
       >
+        <ListItemAvatar>
+          <Avatar src={tutor.imageUrl} />
+        </ListItemAvatar>
         <ListItemText
-          primary={tutor.name}
-          secondary={tutor.education.institution}
+          primary={firstLetterUpper(tutor.name)}
+          secondary={firstLetterUpper(tutor.education.institution)}
         />
       </ListItem>
+
       <Divider />
     </div>
   )

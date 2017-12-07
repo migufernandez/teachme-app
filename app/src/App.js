@@ -6,6 +6,7 @@ import Subjects from './pages/subjects/index2'
 import Departments from './pages/departments'
 import ShowSubject from './pages/subjects/show'
 import Tutors from './pages/tutors/index'
+import ShowTutor from './pages/tutors/show'
 
 import history from './history'
 
@@ -16,8 +17,8 @@ const App = props => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/company" component={Company} />
-          <Route exact path="/subjects/:id" component={ShowSubject} />
           <Route exact path="/subjects" component={Subjects} />
+          <Route exact path="/subjects/:id" component={ShowSubject} />
           <Route path="/departments" component={Departments} />
           <Route
             exact
@@ -25,6 +26,7 @@ const App = props => {
             component={Subjects}
           />
           <Route exact path="/tutors" component={Tutors} />
+          <Route path="/tutors/:id" component={ShowTutor} />
         </Switch>
       </div>
     </Router>

@@ -18,6 +18,8 @@ db.bulkDocs([
     sorthDesc:
       'Hi, my name is Cam Montgomery and I am a student of bio physics at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is calculus but I can also teach algebra and arithmetic',
     linkedIn: 'https://www.linkedin.com/in/cam-montgomery-30492432/',
+    imageUrl:
+      'https://media.licdn.com/media/AAEAAQAAAAAAAAbjAAAAJDE1NTViNWZiLTkzODctNDU1Yy1hODcxLTBiNWRkZDUxNzZlMQ.jpg',
     countryBirth: 'united states',
     currentLocation: {
       city: 'mount pleasant, SC',

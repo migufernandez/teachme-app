@@ -19,7 +19,7 @@ class Tutors extends React.Component {
     return (
       <div>
         <MenuAppBar title="TutorMe" />
-        <List style={{ padding: 0, marginBottom: 60 }}>
+        <List style={{ paddingTop: 50, marginBottom: 60 }}>
           {map(
             tutor => <TutorItem key={tutor._id} tutor={tutor} />,
             sorter(this.props.tutors)
