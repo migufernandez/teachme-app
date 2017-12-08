@@ -4,7 +4,7 @@ import withDrawer from '../components/withDrawer'
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import { connect } from 'react-redux'
 import { Button } from 'material-ui'
-import students from '../images/students.jpg'
+import hbs from '../images/hbs.jpg'
 
 class Home extends React.Component {
   componentDidMount() {
@@ -15,13 +15,20 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{
+          flexGrow: 1,
+          backgroundImage: `url(${hbs})`,
+          height: '100vh',
+          width: '100vw',
+          zIndex: '-99'
+        }}
+      >
         <MenuAppBar title="TutorMe" />
         <div
           style={{
             textAlign: 'center',
-            paddingTop: '100%',
-            backgroundImage: 'url(' + students + ')'
+            paddingTop: '100%'
           }}
         >
           <Button raised>GET STARTED</Button>

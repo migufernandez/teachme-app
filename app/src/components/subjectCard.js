@@ -1,9 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import Card, { CardContent, CardMedia, CardHeader } from 'material-ui/Card'
+import Card, {
+  CardActions,
+  CardContent,
+  CardMedia,
+  CardHeader
+} from 'material-ui/Card'
 import { compose, toUpper, slice, join, split, toLower, pathOr } from 'ramda'
 import Avatar from 'material-ui/Avatar'
+import { Button } from 'material-ui'
 
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import Typography from 'material-ui/Typography'
@@ -26,20 +32,9 @@ const styles = {
 }
 
 class SubjectCard extends React.Component {
-  // const findTutorsButton = this.props.currentTutor.subjects === this.prop.currentSubject.subjectName)) ? (
-  //   <Button
-  //     dense
-  //     color="primary"
-  //     onClick={e => {
-  //       this.props.history.push(`${/tutors/tutor._id}`)
-  //   >
-  //     Find tutors
-  //   </Button>
-  // ) : null
-  subjectName = () => pathOr('', ['subjectName', 'subjectName'], this.props)
-  description = () => pathOr('', ['subjectName', 'description'], this.props)
-
   render() {
+    const subjectName = pathOr('', ['subjectName', 'subjectName'], this.props)
+    const description = pathOr('', ['subjectName', 'description'], this.props)
     console.log('this', this.props)
     const { classes } = this.props
     return (
@@ -47,7 +42,7 @@ class SubjectCard extends React.Component {
         <Card className={classes.card} style={{ marginBottom: 32 }}>
           <CardMedia className={classes.media}>
             <iframe
-              title={this.subjectName()}
+              title={subjectName}
               width="100%"
               height="100%"
               frameBorder="0"
@@ -72,14 +67,25 @@ class SubjectCard extends React.Component {
                   join(' '),
                   split(' '),
                   toLower()
-                )(this.subjectName())}
+                )(subjectName)}
               </Avatar>
             }
-            title={this.subjectName()}
+            title={subjectName}
           />
           <CardContent>
-            <Typography component="p">{this.description()}</Typography>
+            <Typography component="p">{description}</Typography>
           </CardContent>
+          <CardActions>
+            <Button
+              dense
+              color="primary"
+              onClick={e => {
+                this.props.history.push(`/tutors/subjects/${subjectName}`)
+              }}
+            >
+              Find Tutors
+            </Button>
+          </CardActions>
         </Card>
         <SimpleBottomNavigation />
       </div>

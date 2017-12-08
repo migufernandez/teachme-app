@@ -26,7 +26,8 @@ const App = props => {
             component={Subjects}
           />
           <Route exact path="/tutors" component={Tutors} />
-          <Route path="/tutors/:id" component={ShowTutor} />
+          <Route exact path="/tutors/:id" component={ShowTutor} />
+          <Route exact path="/tutors/subjects/:id" component={Tutors} />
         </Switch>
       </div>
     </Router>

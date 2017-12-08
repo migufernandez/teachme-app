@@ -24,7 +24,7 @@ class ShowSubject extends React.Component {
       return (
         <div>
           <MenuAppBar title="TutorMe" />
-          <SubjectCard />
+          <SubjectCard {...this.props} />
         </div>
       )
     } else {

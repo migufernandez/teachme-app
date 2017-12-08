@@ -59,8 +59,6 @@ class TutorCard extends React.Component {
   tutorName = () => pathOr('', ['name', 'name'], this.props)
   description = () => pathOr('', ['name', 'shortDesc'], this.props)
   image = () => pathOr('', ['name', 'imageUrl'], this.props)
-  // currentLocation = () =>
-  //   pathOr('', ['name', 'currentLocation', 'city'], this.props)
 
   render() {
     console.log('this', this.props)
