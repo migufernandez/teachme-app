@@ -4,7 +4,7 @@ import withDrawer from '../components/withDrawer'
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import { connect } from 'react-redux'
 import { Button } from 'material-ui'
-import hbs from '../images/hbs.jpg'
+import harvard from '../images/harvard.jpg'
 
 class Home extends React.Component {
   componentDidMount() {
@@ -18,7 +18,11 @@ class Home extends React.Component {
       <div
         style={{
           flexGrow: 1,
-          backgroundImage: `url(${hbs})`,
+          backgroundImage: `url(${harvard})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no repeat',
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
           height: '100vh',
           width: '100vw',
           zIndex: '-99'
@@ -28,7 +32,7 @@ class Home extends React.Component {
         <div
           style={{
             textAlign: 'center',
-            paddingTop: '100%'
+            paddingTop: '50%'
           }}
         >
           <Button raised>GET STARTED</Button>
