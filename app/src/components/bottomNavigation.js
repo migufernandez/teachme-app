@@ -30,8 +30,6 @@ class SimpleBottomNavigation extends React.Component {
         style={{ position: 'fixed', bottom: '0', width: '100%' }}
       >
         <BottomNavigationButton label="Home" icon={<HomeIcon />} />
-        <BottomNavigationButton label="Departments" icon={<FolderIcon />} />
-        <BottomNavigationButton label="Subjects" icon={<BookmarkIcon />} />
         <BottomNavigationButton label="Tutors" icon={<RecordVoiceOverIcon />} />
         <BottomNavigationButton label="LogIn" icon={<FaceIcon />} />
       </BottomNavigation>

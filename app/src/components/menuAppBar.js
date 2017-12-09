@@ -1,46 +1,47 @@
 import React from 'react'
+import { withStyles } from 'material-ui/styles'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
-import { Typography } from 'material-ui'
+import Typography from 'material-ui/Typography'
 import IconButton from 'material-ui/IconButton'
 import MenuIcon from 'material-ui-icons/Menu'
 import GoBackIcon from 'material-ui-icons/KeyboardArrowLeft'
 import SearchIcon from 'material-ui-icons/Search'
 
 import { connect } from 'react-redux'
-import { propOr } from 'ramda'
+import { propOr, isNil } from 'ramda'
 
-// const styles = theme => ({
-//   root: {
-//     width: '100%'
-//   },
-//   flex: {
-//     flex: 1
-//   },
-//   firstButton: {
-//     marginLeft: -12,
-//     marginRight: 12
-//   },
-//   lastButton: {
-//     marginLeft: 12,
-//     marginRight: -12
-//   }
-// })
+const styles = theme => ({
+  root: {
+    width: '100%'
+  },
+  flex: {
+    flex: 1
+  },
+  firstButton: {
+    marginLeft: -12,
+    marginRight: 12
+  },
+  lastButton: {
+    marginLeft: 12,
+    marginRight: -12
+  }
+})
 
 const MenuAppBar = props => {
-  // const { classes } = props
-  const secondaryMenu = propOr(null, 'secondaryMenu', props)
+  const { classes } = props
   return (
-    <div>
+    <div id="menu-container" className={classes.root}>
       <AppBar position="fixed">
         <Toolbar>
-          <Typography type="title" color="inherit" onClick={props.toggleDrawer}>
+          <Typography type="title" color="inherit" className={classes.flex}>
             {props.title}
           </Typography>
           <IconButton color="contrast" aria-label="Search">
             <SearchIcon />
           </IconButton>
           <IconButton
+            className={classes.firstButton}
             color="contrast"
             aria-label="Menu"
             onClick={
@@ -57,7 +58,6 @@ const MenuAppBar = props => {
               <MenuIcon />
             )}
           </IconButton>
-          {secondaryMenu}
         </Toolbar>
       </AppBar>
     </div>
@@ -79,4 +79,4 @@ const mapActionsToProps = (dispatch, getState) => ({
 
 const connector = connect(mapStateToProps, mapActionsToProps)
 
-export default connector(MenuAppBar)
+export default connector(withStyles(styles)(MenuAppBar))

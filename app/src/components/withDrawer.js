@@ -2,7 +2,13 @@ import React from 'react'
 import { Drawer } from 'material-ui'
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List'
 import HomeIcon from 'material-ui-icons/Home'
-import TrendingFlatIcon from 'material-ui-icons/TrendingFlat'
+import FaceIcon from 'material-ui-icons/Face'
+import RecordVoiceOverIcon from 'material-ui-icons/RecordVoiceOver'
+import FolderIcon from 'material-ui-icons/Folder'
+import BookmarkIcon from 'material-ui-icons/Bookmark'
+import BusinessIcon from 'material-ui-icons/Business'
+import Divider from 'material-ui/Divider'
+
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -17,36 +23,46 @@ const sideList = (
           <ListItemText primary="Home" />
         </ListItem>
       </Link>
+      <Divider />
       <Link to="/departments" className="router-link">
         <ListItem button>
-          <ListItemText primary="Departments" />
           <ListItemIcon>
-            <TrendingFlatIcon />
+            <FolderIcon />
           </ListItemIcon>
+          <ListItemText primary="Departments" />
         </ListItem>
       </Link>
       <Link to="/subjects" className="router-link">
         <ListItem button>
-          <ListItemText primary="Subjects" />
           <ListItemIcon>
-            <TrendingFlatIcon />
+            <BookmarkIcon />
           </ListItemIcon>
+          <ListItemText primary="Subjects" />
         </ListItem>
       </Link>
       <Link to="/tutors" className="router-link">
         <ListItem button>
-          <ListItemText primary="Tutors" />
           <ListItemIcon>
-            <TrendingFlatIcon />
+            <RecordVoiceOverIcon />
           </ListItemIcon>
+          <ListItemText primary="Tutors" />
         </ListItem>
       </Link>
+      <Divider />
       <Link to="/company" className="router-link">
         <ListItem button>
-          <ListItemText primary="Company" />
           <ListItemIcon>
-            <TrendingFlatIcon />
+            <BusinessIcon />
           </ListItemIcon>
+          <ListItemText primary="Company" />
+        </ListItem>
+      </Link>
+      <Link to="/login" className="router-link">
+        <ListItem button>
+          <ListItemIcon>
+            <FaceIcon />
+          </ListItemIcon>
+          <ListItemText primary="LogIn" />
         </ListItem>
       </Link>
     </List>
