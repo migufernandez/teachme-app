@@ -70,7 +70,7 @@ class TutorCard extends React.Component {
           <CardHeader
             className={classes.cardHeader}
             title={firstLetterUpper(this.tutorName())}
-            subheader={this.props.name.currentLocation.city}
+            subheader={this.props.name.currentCity}
           />
           <CardActions>
             <IconButton className={classes.button} aria-label="Call">

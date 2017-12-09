@@ -18,11 +18,13 @@ class ShowTutor extends React.Component {
   }
   render() {
     console.log('THIS', this.props)
+    console.log('THIS', this.props.match.params.id)
+    console.log('CURRENTID', currentID)
     const currentID = pathOr('', ['currentTutor', '_id'], this.props)
     if (this.props.match.params.id === currentID) {
       return (
         <div>
-          <MenuAppBar title="TutorMe" />
+          <MenuAppBar title="TutorMe" goBack={'/tutors'} {...this.props} />
           <TutorCard />
         </div>
       )

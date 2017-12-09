@@ -27,7 +27,7 @@ const TutorItem = ({ tutor, history }) => {
         </ListItemAvatar>
         <ListItemText
           primary={firstLetterUpper(tutor.name)}
-          secondary={firstLetterUpper(tutor.education.institution)}
+          secondary={firstLetterUpper(tutor.institution)}
         />
       </ListItem>
 

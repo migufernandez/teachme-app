@@ -11,24 +11,16 @@ db.bulkDocs([
     name: 'cam montgomery',
     gender: 'male',
     birthDate: '1990-11-29',
-    contact: {
-      email: 'camontgomery@gmail.com',
-      phone: '8435873450'
-    },
+    email: 'cammontgomery@gmail.com',
+    phone: '8435873450',
     sorthDesc:
       'Hi, my name is Cam Montgomery and I am a student of bio physics at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is calculus but I can also teach algebra and arithmetic',
-    linkedIn: 'https://www.linkedin.com/in/cam-montgomery-30492432/',
     imageUrl:
       'https://media.licdn.com/media/AAEAAQAAAAAAAAbjAAAAJDE1NTViNWZiLTkzODctNDU1Yy1hODcxLTBiNWRkZDUxNzZlMQ.jpg',
     countryBirth: 'united states',
-    currentLocation: {
-      city: 'mount pleasant, SC',
-      zipCode: 29464
-    },
-    education: {
-      level: 'masters degree in computer science',
-      institution: 'university of georgia'
-    },
+    currentCity: 'mount pleasant, SC',
+    education: 'masters degree in computer science',
+    institution: 'university of georgia',
     subjects: [
       {
         name: 'calculus',
@@ -46,22 +38,16 @@ db.bulkDocs([
     name: 'trip ottinger',
     gender: 'male',
     birthDate: '1979-02-15',
-    contact: {
-      email: 'tripott@gmail.com',
-      phone: '8434569874'
-    },
+    email: 'tripott@gmail.com',
+    phone: '8434569874',
     sorthDesc:
       'Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
-    linkedIn: 'https://www.linkedin.com/in/trip-ottinger-8b465a5/',
+    imageUrl:
+      'https://media.licdn.com/media/AAEAAQAAAAAAAAmjAAAAJDc2M2YzMzdkLTJjMGQtNGY4OS1iMjY0LTc3ZjJmMTQ0OGRlYQ.jpg',
     countryBirth: 'united states',
-    currentLocation: {
-      city: 'savannah, GA',
-      zipCode: 31302
-    },
-    education: {
-      level: 'masters degree in computer science',
-      institution: 'university of georgia'
-    },
+    currentCity: 'savannah, GA',
+    education: 'masters degree in computer science',
+    institution: 'university of georgia',
     subjects: [
       {
         name: 'calculus',
@@ -83,22 +69,15 @@ db.bulkDocs([
     name: 'tom wilson',
     gender: 'male',
     birthDate: '1982-03-13',
-    contact: {
-      email: 'tomwilson@gmail.com',
-      phone: '8436749874'
-    },
+    email: 'tomwilson@gmail.com',
+    phone: '8436749874',
     sorthDesc:
       'Hi, my name is Tom Wilson and I am a student of computer science at Georgia Tech. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
-    linkedIn: 'https://www.linkedin.com/in/twilson63/',
+    imageUrl: 'https://media.licdn.com/media/p/2/000/007/091/04eb330.jpg',
     countryBirth: 'united states',
-    currentLocation: {
-      city: 'Mount Pleasant, SC',
-      zipCode: 29464
-    },
-    education: {
-      level: 'masters degree in computer science',
-      institution: 'Georgia Tech'
-    },
+    currentCity: 'Mount Pleasant, SC',
+    education: 'masters degree in computer science',
+    institution: 'Georgia Tech',
     subjects: [
       {
         name: 'design',
@@ -120,22 +99,16 @@ db.bulkDocs([
     name: 'currey thomas',
     gender: 'male',
     birthDate: '1992-10-20',
-    contact: {
-      email: 'curreythomas@gmail.com',
-      phone: '8436308745'
-    },
+    email: 'curreythomas@gmail.com',
+    phone: '8436308745',
     sorthDesc:
       'Hi, my name is Currey Thomas and I am a student of computer science at Michigan University. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
-    linkedIn: 'https://www.linkedin.com/in/curreythomas/',
+    imageUrl:
+      'https://media.licdn.com/media/AAIAAQDGAAwAAQAAAAAAAA0qAAAAJGM5Yzc2OGYyLTRmMmItNDk3ZC04MjJhLTBmZGI1NzBmN2NiOQ.jpg',
     countryBirth: 'united states',
-    currentLocation: {
-      city: 'Grand Rapids, MI',
-      zipCode: 49501
-    },
-    education: {
-      level: 'masters degree in finance',
-      institution: 'Michigan University'
-    },
+    currentCity: 'Grand Rapids, MI',
+    education: 'masters degree in finance',
+    institution: 'Michigan University',
     subjects: [
       {
         name: 'calculus',
@@ -157,22 +130,15 @@ db.bulkDocs([
     name: 'jeff montgomery',
     gender: 'male',
     birthDate: '1984-09-22',
-    contact: {
-      email: 'jeffmontgomery@gmail.com',
-      phone: '8434569874'
-    },
+    email: 'jeffmontgomery@gmail.com',
+    phone: '8434569874',
     sorthDesc:
       'Hi, my name is jeff Montgomery and I am a student of biology at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is biology but I can also teach physics and zoology',
-    linkedIn: 'https://www.linkedin.com/in/jeffmonty/',
+    imageUrl: 'https://media.licdn.com/media/p/2/000/103/130/2a01e95.jpg',
     countryBirth: 'united states',
-    currentLocation: {
-      city: 'savannah, GA',
-      zipCode: 31302
-    },
-    education: {
-      level: 'masters degree in biology',
-      institution: 'university of georgia'
-    },
+    currentCity: 'savannah, GA',
+    education: 'masters degree in biology',
+    institution: 'university of georgia',
     subjects: [
       {
         name: 'biology',
@@ -194,22 +160,15 @@ db.bulkDocs([
     name: 'Bill Joy',
     gender: 'male',
     birthDate: '1979-07-03',
-    contact: {
-      email: 'billjoy@gmail.com',
-      phone: '8432943300'
-    },
+    email: 'billjoy@gmail.com',
+    phone: '8432943300',
     sorthDesc:
       'Hi, my name is Bill Joy and I am a student of computer science at University of Dallas. I have the passion and motivation to teach any high school student. My strongest skill is Philosophy but I can also teach Sociology and health',
-    linkedIn: 'https://www.linkedin.com/in/billjoy/',
+    imageUrl: 'https://media.licdn.com/media/p/6/005/066/115/177f407.jpg',
     countryBirth: 'united states',
-    currentLocation: {
-      city: 'dallas, TX',
-      zipCode: 75001
-    },
-    education: {
-      level: 'masters degree in Philosophy',
-      institution: 'university of dallas'
-    },
+    currentCity: 'dallas, TX',
+    education: 'masters degree in Philosophy',
+    institution: 'university of dallas',
     subjects: [
       {
         name: 'Philosophy',
@@ -231,22 +190,16 @@ db.bulkDocs([
     name: 'James Driscoll',
     gender: 'male',
     birthDate: '1993-01-10',
-    contact: {
-      email: 'jamesdriscoll@gmail.com',
-      phone: '8434563987'
-    },
+    email: 'jamesdriscoll@gmail.com',
+    phone: '8434563987',
     sorthDesc:
       'Hi, my name is James Driscoll and I am a student of computer science at College of Charleston. I have the passion and motivation to teach any high school student. My strongest skill is programming.',
-    linkedIn: 'https://www.linkedin.com/in/jjdii/',
+    imageUrl:
+      'https://media.licdn.com/media/AAEAAQAAAAAAAAniAAAAJGU1ODU3OTg1LTUwN2MtNDJhOC05ZDY0LTgxYWZhMzg1MzYwNQ.jpg',
     countryBirth: 'united states',
-    currentLocation: {
-      city: 'Charleston, SC',
-      zipCode: 29466
-    },
-    education: {
-      level: 'masters degree in computer science',
-      institution: 'College of Charleston'
-    },
+    currentCity: 'Charleston, SC',
+    education: 'masters degree in computer science',
+    institution: 'College of Charleston',
     subjects: [
       {
         name: 'programming',
@@ -260,22 +213,16 @@ db.bulkDocs([
     name: 'miguel fernandez',
     gender: 'male',
     birthDate: '1989-06-10',
-    contact: {
-      email: 'mfernandezsaenz@gmail.com',
-      phone: '8433037112'
-    },
+    email: 'mfernandezsaenz@gmail.com',
+    phone: '8433037112',
     sorthDesc:
       'Hi, my name is Miguel Fernandez and I am a student of Business Administration at University of Navarra. I have the passion and motivation to teach any high school student. My strongest skill is coding but I can also teach geometry and statistics',
-    linkedIn: 'https://www.linkedin.com/in/mfernandezsaenz/',
+    imageUrl:
+      'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAcuAAAAJDg3NzFjY2Q1LTM5MmQtNDMwNy1hNzU0LTM0NjA0ZTI5ZGUzMw.jpg',
     countryBirth: 'spain',
-    currentLocation: {
-      city: 'Mount Pleasant, SC',
-      zipCode: 29464
-    },
-    education: {
-      level: 'masters degree in Business Administration',
-      institution: 'university of Navarra'
-    },
+    currentCity: 'Mount Pleasant, SC',
+    education: 'masters degree in Business Administration',
+    institution: 'university of Navarra',
     subjects: [
       {
         name: 'geometry',

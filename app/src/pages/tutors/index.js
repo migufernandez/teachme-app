@@ -4,6 +4,9 @@ import MenuAppBar from '../../components/menuAppBar'
 import withDrawer from '../../components/withDrawer'
 import TutorItem from '../../components/tutorItem'
 import List from 'material-ui/List'
+import Button from 'material-ui/Button'
+import AddIcon from 'material-ui-icons/Add'
+import { Link } from 'react-router-dom'
 import {
   map,
   sortBy,
@@ -54,6 +57,11 @@ class Tutors extends React.Component {
             displayedTutors
           )}
         </List>
+        <Link to="/tutors/new">
+          <Button fab color="primary" aria-label="add" className="fab-button">
+            <AddIcon />
+          </Button>
+        </Link>
         <SimpleBottomNavigation />
       </div>
     )
