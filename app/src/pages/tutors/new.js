@@ -3,7 +3,12 @@ import withDrawer from '../../components/withDrawer'
 import MenuAppBar from '../../components/menuAppBar'
 import TutorForm from '../../components/tutorForm'
 import { connect } from 'react-redux'
-import { createTutor, isActive, setTutors } from '../../action-creators/tutors'
+import {
+  createTutor,
+  isActive,
+  setTutors,
+  updateNewForm
+} from '../../action-creators/tutors'
 
 class NewTutor extends React.Component {
   componentDidMount() {}
@@ -36,6 +41,10 @@ const mapStateToProps = state => {
 
 const mapActionsToProps = dispatch => {
   return {
+    onChange: (field, value) => {
+      dispatch(updateNewForm(field, value))
+      dispatch(isActive)
+    },
     onSubmit: (data, history) => e => {
       dispatch(createTutor(data, history))
     },

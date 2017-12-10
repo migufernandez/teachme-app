@@ -1,7 +1,7 @@
 import {
   SET_TUTORS,
   SET_CURRENT_TUTOR,
-  UPDATE_NEW_RES_FORM,
+  UPDATE_NEW_TUTOR_FORM,
   IS_ACTIVE
 } from '../constants'
 import { merge } from 'ramda'
@@ -40,7 +40,7 @@ const setDefaultTutor = {
 }
 export const newTutor = (state = setDefaultTutor, action) => {
   switch (action.type) {
-    case UPDATE_NEW_RES_FORM:
+    case UPDATE_NEW_TUTOR_FORM:
       return merge(state, action.payload)
     case SET_TUTORS:
       return setDefaultTutor

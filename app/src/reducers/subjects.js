@@ -5,7 +5,7 @@ import {
   // SET_SUBJECT_FILTER
 } from '../constants'
 
-export const subjects = (state = [], action) => {
+export const allSubjects = (state = [], action) => {
   switch (action.type) {
     case SET_SUBJECTS:
       return action.payload

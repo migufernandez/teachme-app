@@ -73,7 +73,7 @@ Adds a tutor to the collection of tutors.  When adding a tutor the `type`,`name`
       "email": "tripott@gmail.com",
       "phone": "8434569874"
     },
-    "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+    "shortDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
     "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
     "countryBirth": "united states",
     "currentLocation": {
@@ -135,7 +135,7 @@ GET /tutors/tutor_trip-ottinger
     "email": "tripott@gmail.com",
     "phone": "8434569874"
   },
-  "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+  "shortDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
   "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
   "countryBirth": "united states",
   "currentLocation": {
@@ -184,7 +184,7 @@ PUT /tutors/tutor_trip-ottinger
     "email": "tripott@gmail.com",
     "phone": "8434569874"
   },
-  "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+  "shortDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
   "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
   "countryBirth": "united states",
   "currentLocation": {
@@ -265,7 +265,7 @@ GET /tutors
     "email": "tripott@gmail.com",
     "phone": "8434569874"
   },
-  "sorthDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
+  "shortDesc": "Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic",
   "linkedIn": "https://www.linkedin.com/in/trip-ottinger-8b465a5/",
   "countryBirth": "united states",
   "currentLocation": {
@@ -302,7 +302,7 @@ GET /tutors
     "email": "camontgomery@gmail.com",
     "phone": "8435873450"
   },
-  "sorthDesc": "Hi, my name is Cam Montgomery and I am a student of bio physics at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is calculus but I can also teach algebra and arithmetic",
+  "shortDesc": "Hi, my name is Cam Montgomery and I am a student of bio physics at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is calculus but I can also teach algebra and arithmetic",
   "linkedIn": "https://www.linkedin.com/in/cam-montgomery-30492432/",
   "countryBirth": "united states",
   "currentLocation": {

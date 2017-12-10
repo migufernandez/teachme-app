@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom'
 const sideList = (
   <div>
     <List>
-      <Link to="/" className="router-link">
+      <Link to="/" className="router-link" style={{ textDecoration: 'none' }}>
         <ListItem button>
           <ListItemIcon>
             <HomeIcon />
@@ -24,7 +24,11 @@ const sideList = (
         </ListItem>
       </Link>
       <Divider />
-      <Link to="/departments" className="router-link">
+      <Link
+        to="/departments"
+        className="router-link"
+        style={{ textDecoration: 'none' }}
+      >
         <ListItem button>
           <ListItemIcon>
             <FolderIcon />
@@ -32,7 +36,11 @@ const sideList = (
           <ListItemText primary="Departments" />
         </ListItem>
       </Link>
-      <Link to="/subjects" className="router-link">
+      <Link
+        to="/subjects"
+        className="router-link"
+        style={{ textDecoration: 'none' }}
+      >
         <ListItem button>
           <ListItemIcon>
             <BookmarkIcon />
@@ -40,7 +48,11 @@ const sideList = (
           <ListItemText primary="Subjects" />
         </ListItem>
       </Link>
-      <Link to="/tutors" className="router-link">
+      <Link
+        to="/tutors"
+        className="router-link"
+        style={{ textDecoration: 'none' }}
+      >
         <ListItem button>
           <ListItemIcon>
             <RecordVoiceOverIcon />
@@ -49,7 +61,11 @@ const sideList = (
         </ListItem>
       </Link>
       <Divider />
-      <Link to="/company" className="router-link">
+      <Link
+        to="/company"
+        className="router-link"
+        style={{ textDecoration: 'none' }}
+      >
         <ListItem button>
           <ListItemIcon>
             <BusinessIcon />
@@ -57,7 +73,11 @@ const sideList = (
           <ListItemText primary="Company" />
         </ListItem>
       </Link>
-      <Link to="/login" className="router-link">
+      <Link
+        to="/login"
+        className="router-link"
+        style={{ textDecoration: 'none' }}
+      >
         <ListItem button>
           <ListItemIcon>
             <FaceIcon />

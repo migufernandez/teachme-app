@@ -13,7 +13,7 @@ db.bulkDocs([
     birthDate: '1990-11-29',
     email: 'cammontgomery@gmail.com',
     phone: '8435873450',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is Cam Montgomery and I am a student of bio physics at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is calculus but I can also teach algebra and arithmetic',
     imageUrl:
       'https://media.licdn.com/media/AAEAAQAAAAAAAAbjAAAAJDE1NTViNWZiLTkzODctNDU1Yy1hODcxLTBiNWRkZDUxNzZlMQ.jpg',
@@ -40,7 +40,7 @@ db.bulkDocs([
     birthDate: '1979-02-15',
     email: 'tripott@gmail.com',
     phone: '8434569874',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is Trip Ottinger and I am a student of computer science at University of Georgia. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
     imageUrl:
       'https://media.licdn.com/media/AAEAAQAAAAAAAAmjAAAAJDc2M2YzMzdkLTJjMGQtNGY4OS1iMjY0LTc3ZjJmMTQ0OGRlYQ.jpg',
@@ -71,7 +71,7 @@ db.bulkDocs([
     birthDate: '1982-03-13',
     email: 'tomwilson@gmail.com',
     phone: '8436749874',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is Tom Wilson and I am a student of computer science at Georgia Tech. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
     imageUrl: 'https://media.licdn.com/media/p/2/000/007/091/04eb330.jpg',
     countryBirth: 'united states',
@@ -101,7 +101,7 @@ db.bulkDocs([
     birthDate: '1992-10-20',
     email: 'curreythomas@gmail.com',
     phone: '8436308745',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is Currey Thomas and I am a student of computer science at Michigan University. I have the passion and motivation to teach any high school student. My strongest skill is algebra but I can also teach calculus and arithmetic',
     imageUrl:
       'https://media.licdn.com/media/AAIAAQDGAAwAAQAAAAAAAA0qAAAAJGM5Yzc2OGYyLTRmMmItNDk3ZC04MjJhLTBmZGI1NzBmN2NiOQ.jpg',
@@ -132,7 +132,7 @@ db.bulkDocs([
     birthDate: '1984-09-22',
     email: 'jeffmontgomery@gmail.com',
     phone: '8434569874',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is jeff Montgomery and I am a student of biology at University of South Carolina. I have the passion and motivation to teach any high school student. My strongest skill is biology but I can also teach physics and zoology',
     imageUrl: 'https://media.licdn.com/media/p/2/000/103/130/2a01e95.jpg',
     countryBirth: 'united states',
@@ -162,7 +162,7 @@ db.bulkDocs([
     birthDate: '1979-07-03',
     email: 'billjoy@gmail.com',
     phone: '8432943300',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is Bill Joy and I am a student of computer science at University of Dallas. I have the passion and motivation to teach any high school student. My strongest skill is Philosophy but I can also teach Sociology and health',
     imageUrl: 'https://media.licdn.com/media/p/6/005/066/115/177f407.jpg',
     countryBirth: 'united states',
@@ -192,7 +192,7 @@ db.bulkDocs([
     birthDate: '1993-01-10',
     email: 'jamesdriscoll@gmail.com',
     phone: '8434563987',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is James Driscoll and I am a student of computer science at College of Charleston. I have the passion and motivation to teach any high school student. My strongest skill is programming.',
     imageUrl:
       'https://media.licdn.com/media/AAEAAQAAAAAAAAniAAAAJGU1ODU3OTg1LTUwN2MtNDJhOC05ZDY0LTgxYWZhMzg1MzYwNQ.jpg',
@@ -215,7 +215,7 @@ db.bulkDocs([
     birthDate: '1989-06-10',
     email: 'mfernandezsaenz@gmail.com',
     phone: '8433037112',
-    sorthDesc:
+    shortDesc:
       'Hi, my name is Miguel Fernandez and I am a student of Business Administration at University of Navarra. I have the passion and motivation to teach any high school student. My strongest skill is coding but I can also teach geometry and statistics',
     imageUrl:
       'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAcuAAAAJDg3NzFjY2Q1LTM5MmQtNDMwNy1hNzU0LTM0NjA0ZTI5ZGUzMw.jpg',

@@ -1,5 +1,11 @@
 import fetch from 'isomorphic-fetch'
-import { SET_TUTORS, SET_CURRENT_TUTOR, ERROR, IS_ACTIVE } from '../constants'
+import {
+  SET_TUTORS,
+  SET_CURRENT_TUTOR,
+  ERROR,
+  IS_ACTIVE,
+  UPDATE_NEW_TUTOR_FORM
+} from '../constants'
 import history from '../history'
 import { isEmpty } from 'ramda'
 const url = process.env.REACT_APP_BASE_URL
@@ -76,4 +82,8 @@ export const isActive = async (dispatch, getState) => {
   } else {
     dispatch({ type: IS_ACTIVE, payload: false })
   }
+}
+
+export const updateNewForm = (field, value) => (dispatch, getState) => {
+  dispatch({ type: UPDATE_NEW_TUTOR_FORM, payload: { [field]: value } })
 }

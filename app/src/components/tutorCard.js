@@ -87,7 +87,7 @@ class TutorCard extends React.Component {
             <Typography type="headline" component="h1">
               Description
             </Typography>
-            <Typography component="p">{this.props.name.sorthDesc}</Typography>
+            <Typography component="p">{this.props.name.shortDesc}</Typography>
           </CardContent>
         </Card>
         <SimpleBottomNavigation />

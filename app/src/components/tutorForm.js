@@ -11,14 +11,14 @@ import SaveIcon from 'material-ui-icons/Save'
 import { map } from 'ramda'
 import { connect } from 'react-redux'
 
-const styles = {
+const styles = theme => ({
   input: {
     wigth: '50%',
     marginLeft: 16,
     marginTop: 16,
     marginBottom: 8
   }
-}
+})
 
 class TutorForm extends React.Component {
   render() {
@@ -55,7 +55,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Birth date"
           placeholder="Birth date"
-          value={this.props.newTutor.birthDate}
+          value={this.props.birthDate}
           onChange={e => {
             this.props.onChange('birthDate', e.target.value)
           }}
@@ -65,7 +65,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Email"
           placeholder="Email"
-          value={this.props.newTutor.email}
+          value={this.props.email}
           onChange={e => {
             this.props.onChange('email', e.target.value)
           }}
@@ -75,7 +75,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Phone"
           placeholder="Phone"
-          value={this.props.newTutor.phone}
+          value={this.props.phone}
           onChange={e => {
             this.props.onChange('phone', e.target.value)
           }}
@@ -85,9 +85,9 @@ class TutorForm extends React.Component {
         <TextField
           label="Description"
           placeholder="Description"
-          value={this.props.newTutor.sorthDesc}
+          value={this.props.shortDesc}
           onChange={e => {
-            this.props.onChange('sorthDesc', e.target.value)
+            this.props.onChange('shortDesc', e.target.value)
           }}
           className={styles.input}
           margin="normal"
@@ -95,7 +95,7 @@ class TutorForm extends React.Component {
         <TextField
           label="imageUrl"
           placeholder="imageUrl"
-          value={this.props.newTutor.imageUrl}
+          value={this.props.imageUrl}
           onChange={e => {
             this.props.onChange('imageUrl', e.target.value)
           }}
@@ -105,7 +105,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Country of Birth"
           placeholder="Country of Birth"
-          value={this.props.newTutor.countryBirth}
+          value={this.props.countryBirth}
           onChange={e => {
             this.props.onChange('countryBirth', e.target.value)
           }}
@@ -115,7 +115,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Current City"
           placeholder="Current City"
-          value={this.props.newTutor.currentCity}
+          value={this.props.currentCity}
           onChange={e => {
             this.props.onChange('currentCity', e.target.value)
           }}
@@ -125,7 +125,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Education"
           placeholder="Education"
-          value={this.props.newTutor.education}
+          value={this.props.education}
           onChange={e => {
             this.props.onChange('education', e.target.value)
           }}
@@ -135,7 +135,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Institution"
           placeholder="Institution"
-          value={this.props.newTutor.institution}
+          value={this.props.institution}
           onChange={e => {
             this.props.onChange('institution', e.target.value)
           }}
@@ -145,7 +145,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Subjects you teach"
           placeholder="subjects"
-          value={this.props.newTutor.subjects}
+          value={this.props.subjects}
           onChange={e => {
             this.props.onChange('subjects', e.target.value)
           }}
@@ -172,7 +172,20 @@ TutorForm.propTypes = {
 }
 
 const mapStateToProps = state => {
-  return { name: state.name, gender: state.gender }
+  return {
+    name: state.name,
+    gender: state.gender,
+    birthDate: state.birthDate,
+    email: state.email,
+    phone: state.phone,
+    shortDesc: state.shortDesc,
+    imageUrl: state.imageUrl,
+    countryBirth: state.countryBirth,
+    currentCity: state.currentCity,
+    education: state.education,
+    institution: state.institution,
+    subjects: state.subjects
+  }
 }
 
 const mapActionsToProps = dispatch => {
