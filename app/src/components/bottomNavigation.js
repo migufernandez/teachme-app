@@ -10,6 +10,7 @@ import RecordVoiceOverIcon from 'material-ui-icons/RecordVoiceOver'
 import FolderIcon from 'material-ui-icons/Folder'
 import BookmarkIcon from 'material-ui-icons/Bookmark'
 import { Link } from 'react-router-dom'
+import history from '../history'
 
 const styles = {
   root: {
@@ -39,18 +40,22 @@ class SimpleBottomNavigation extends React.Component {
         showLabels
         className={classes.root}
       >
-        <Link to="/" className="router-link">
-          <BottomNavigationButton label="Home" icon={<HomeIcon />} />
-        </Link>
-        <Link to="/tutors" className="router-link">
-          <BottomNavigationButton
-            label="Tutors"
-            icon={<RecordVoiceOverIcon />}
-          />
-        </Link>
-        <Link to="/login" className="router-link">
-          <BottomNavigationButton label="LogIn" icon={<FaceIcon />} />
-        </Link>
+        <BottomNavigationButton
+          label="Home"
+          icon={<HomeIcon />}
+          onClick={e => history.replace('/')}
+        />
+        <BottomNavigationButton
+          label="Tutors"
+          icon={<RecordVoiceOverIcon />}
+          onClick={e => history.replace('/tutors')}
+        />
+
+        <BottomNavigationButton
+          label="LogIn"
+          icon={<FaceIcon />}
+          onClick={e => history.replace('/login')}
+        />
       </BottomNavigation>
     )
   }

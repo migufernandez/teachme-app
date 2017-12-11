@@ -10,7 +10,7 @@ import withDrawer from '../../components/withDrawer'
 // import InfoIcon from 'material-ui-icons/Info'
 
 import { connect } from 'react-redux'
-import { propOr, compose, uniq, map, values, pick, last } from 'ramda'
+import { propOr, compose, uniq, map, pluck } from 'ramda'
 import { setSubjects } from '../../action-creators/subjects'
 
 //import SubjectGridListTile from '../../component/subjectGridListTile'
@@ -24,8 +24,8 @@ const styles = theme => ({
     background: theme.palette.background.paper
   },
   gridList: {
-    width: 'auto',
-    height: 'auto'
+    height: '100vh',
+    paddingBottom: theme.spacing.unit * 15
   }
 })
 
@@ -36,38 +36,37 @@ class Departments extends React.Component {
   render() {
     const { classes } = this.props
     const subjects = propOr([], 'subjects', this.props)
-    const departments = compose(uniq(), map(s => s.department))(subjects)
-    const imageDep = compose(last(), uniq(), map(s => s.imageUrl))(subjects)
-    console.log('SUBJECTs', subjects)
+    const departments = compose(
+      uniq(),
+      map(s => ({ department: s.department, image: s.imageUrl }))
+    )(subjects)
+
     return (
-      console.log('THISSSS', this.props),
-      (
-        <div className={classes.container}>
-          <MenuAppBar title="TutorMe" />
-          <GridList cellHeight={180} className={classes.gridList}>
-            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-              <Subheader component="div">{'Departments'}</Subheader>
-            </GridListTile>
-            {map(
-              department => (
-                <GridListTile
-                  key={department}
-                  onClick={e => {
-                    this.props.history.push(
-                      `/subjects/department/${department}`
-                    )
-                  }}
-                >
-                  <img src={imageDep} alt={department} />
-                  <GridListTileBar title={department} />
-                </GridListTile>
-              ),
-              departments
-            )}
-          </GridList>
-          <SimpleBottomNavigation />
-        </div>
-      )
+      <div className={classes.container}>
+        <MenuAppBar title="TutorMe" />
+        <GridList cellHeight={180} className={classes.gridList}>
+          <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+            <Subheader component="div">{'Departments'}</Subheader>
+          </GridListTile>
+          {map(
+            department => (
+              <GridListTile
+                key={department.department}
+                onClick={e => {
+                  this.props.history.push(
+                    `/subjects/department/${department.department}`
+                  )
+                }}
+              >
+                <img src={department.image} alt={department.department} />
+                <GridListTileBar title={department.department} />
+              </GridListTile>
+            ),
+            departments
+          )}
+        </GridList>
+        <SimpleBottomNavigation />
+      </div>
     )
   }
 }

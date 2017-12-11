@@ -24,7 +24,7 @@ const styles = {
     fontSize: '16px'
   },
   media: {
-    height: '30vh'
+    height: '45vh'
   },
   avatarColor: {
     backgroundColor: '#607d8b'
@@ -35,6 +35,7 @@ class SubjectCard extends React.Component {
   render() {
     const subjectName = pathOr('', ['subjectName', 'subjectName'], this.props)
     const description = pathOr('', ['subjectName', 'description'], this.props)
+    const imageDep = pathOr('', ['subjectName', 'imageUrl'], this.props)
     console.log('this', this.props)
     const { classes } = this.props
     return (
@@ -48,7 +49,7 @@ class SubjectCard extends React.Component {
               frameBorder="0"
               style={{ border: 0 }}
               image
-              src="https://s3.amazonaws.com/kajabi-storefronts-production/site/1823/images/3e0gOCzHT3qHKQXmjPw2_algebra_gre.jpg"
+              src={imageDep}
               allowFullScreen
             />
           </CardMedia>
