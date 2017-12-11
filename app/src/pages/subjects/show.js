@@ -23,7 +23,7 @@ class ShowSubject extends React.Component {
     if (this.props.match.params.id === currentID) {
       return (
         <div>
-          <MenuAppBar title="TutorMe" goBack={'/subjects'} {...this.props} />
+          <MenuAppBar title="TutorMe" goBack {...this.props} />
           <SubjectCard {...this.props} />
         </div>
       )
