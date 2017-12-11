@@ -24,34 +24,36 @@ export const currentTutor = (state = {}, action) => {
   }
 }
 
-const setDefaultTutor = {
+const newTutorDefault = {
   name: '',
   gender: '',
   birthDate: '',
   email: '',
   phone: '',
   shortDesc: '',
-  imageUrl: '',
   countryBirth: '',
   currentCity: '',
   education: '',
   institution: '',
   subjects: ''
 }
-export const newTutor = (state = setDefaultTutor, action) => {
+export const newTutor = (state = newTutorDefault, action) => {
   switch (action.type) {
     case UPDATE_NEW_TUTOR_FORM:
+      console.log('UPDATE_NEW_TUTOR_FORM', action.payload)
       return merge(state, action.payload)
     case SET_TUTORS:
-      return setDefaultTutor
+      return newTutorDefault
     default:
       return state
   }
 }
 
-export const isActive = (state = true, action) => {
+export const isActive = (state = false, action) => {
+  console.log('isActive REDUCER', state)
   switch (action.type) {
     case IS_ACTIVE:
+      console.log('IS_ACTIVE', action.payload)
       return action.payload
     default:
       return state
@@ -106,15 +108,6 @@ export const phone = (state = '', action) => {
 export const shortDesc = (state = '', action) => {
   switch (action.type) {
     case 'shortDesc':
-      return action.payload
-    default:
-      return state
-  }
-}
-
-export const imageUrl = (state = '', action) => {
-  switch (action.type) {
-    case 'imageUrl':
       return action.payload
     default:
       return state

@@ -64,10 +64,7 @@ class Subjects extends React.Component {
                   this.props.history.push(`/subjects/${subject._id}`)
                 }}
               >
-                <img
-                  src="https://s3.amazonaws.com/kajabi-storefronts-production/site/1823/images/3e0gOCzHT3qHKQXmjPw2_algebra_gre.jpg"
-                  alt={subject.subjectName}
-                />
+                <img src={subject.imageUrl} alt={subject.subjectName} />
                 <GridListTileBar title={subject.subjectName} />
               </GridListTile>
             ),

@@ -3,17 +3,22 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Input, { InputLabel } from 'material-ui/Input'
 import { MenuItem } from 'material-ui/Menu'
-import { FormControl } from 'material-ui/Form'
 import Select from 'material-ui/Select'
 import TextField from 'material-ui/TextField'
 import Button from 'material-ui/Button'
 import SaveIcon from 'material-ui-icons/Save'
 import { map } from 'ramda'
-import { connect } from 'react-redux'
+import {
+  FormLabel,
+  FormControl,
+  FormControlLabel,
+  FormHelperText
+} from 'material-ui/Form'
+import Radio, { RadioGroup } from 'material-ui/Radio'
 
 const styles = theme => ({
   input: {
-    wigth: '50%',
+    width: '50%',
     marginLeft: 16,
     marginTop: 16,
     marginBottom: 8
@@ -23,6 +28,9 @@ const styles = theme => ({
 class TutorForm extends React.Component {
   render() {
     const { classes } = this.props
+    const tutorMenuItem = tutor => {
+      return <MenuItem value={tutor.gender}>{tutor.gender}</MenuItem>
+    }
     return (
       <form
         style={{ marginTop: 20, paddingTop: 50 }}
@@ -35,7 +43,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Name"
           placeholder="Name"
-          value={this.props.name}
+          value={this.props.newTutor.name}
           onChange={e => {
             this.props.onChange('name', e.target.value)
           }}
@@ -45,7 +53,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Gender"
           placeholder="Gender"
-          value={this.props.gender}
+          value={this.props.newTutor.gender}
           onChange={e => {
             this.props.onChange('gender', e.target.value)
           }}
@@ -55,7 +63,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Birth date"
           placeholder="Birth date"
-          value={this.props.birthDate}
+          value={this.props.newTutor.birthDate}
           onChange={e => {
             this.props.onChange('birthDate', e.target.value)
           }}
@@ -65,7 +73,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Email"
           placeholder="Email"
-          value={this.props.email}
+          value={this.props.newTutor.email}
           onChange={e => {
             this.props.onChange('email', e.target.value)
           }}
@@ -75,7 +83,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Phone"
           placeholder="Phone"
-          value={this.props.phone}
+          value={this.props.newTutor.phone}
           onChange={e => {
             this.props.onChange('phone', e.target.value)
           }}
@@ -85,7 +93,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Description"
           placeholder="Description"
-          value={this.props.shortDesc}
+          value={this.props.newTutor.shortDesc}
           onChange={e => {
             this.props.onChange('shortDesc', e.target.value)
           }}
@@ -93,19 +101,9 @@ class TutorForm extends React.Component {
           margin="normal"
         />
         <TextField
-          label="imageUrl"
-          placeholder="imageUrl"
-          value={this.props.imageUrl}
-          onChange={e => {
-            this.props.onChange('imageUrl', e.target.value)
-          }}
-          className={styles.input}
-          margin="normal"
-        />
-        <TextField
           label="Country of Birth"
           placeholder="Country of Birth"
-          value={this.props.countryBirth}
+          value={this.props.newTutor.countryBirth}
           onChange={e => {
             this.props.onChange('countryBirth', e.target.value)
           }}
@@ -115,7 +113,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Current City"
           placeholder="Current City"
-          value={this.props.currentCity}
+          value={this.props.newTutor.currentCity}
           onChange={e => {
             this.props.onChange('currentCity', e.target.value)
           }}
@@ -125,7 +123,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Education"
           placeholder="Education"
-          value={this.props.education}
+          value={this.props.newTutor.education}
           onChange={e => {
             this.props.onChange('education', e.target.value)
           }}
@@ -135,7 +133,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Institution"
           placeholder="Institution"
-          value={this.props.institution}
+          value={this.props.newTutor.institution}
           onChange={e => {
             this.props.onChange('institution', e.target.value)
           }}
@@ -145,7 +143,7 @@ class TutorForm extends React.Component {
         <TextField
           label="Subjects you teach"
           placeholder="subjects"
-          value={this.props.subjects}
+          value={this.props.newTutor.subjects}
           onChange={e => {
             this.props.onChange('subjects', e.target.value)
           }}
@@ -158,7 +156,7 @@ class TutorForm extends React.Component {
           type="submit"
           aria-label="add"
           className="fab-button"
-          disabled={this.props.isActive}
+          disabled={!this.props.isActive}
         >
           <SaveIcon />
         </Button>
@@ -171,31 +169,4 @@ TutorForm.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-const mapStateToProps = state => {
-  return {
-    name: state.name,
-    gender: state.gender,
-    birthDate: state.birthDate,
-    email: state.email,
-    phone: state.phone,
-    shortDesc: state.shortDesc,
-    imageUrl: state.imageUrl,
-    countryBirth: state.countryBirth,
-    currentCity: state.currentCity,
-    education: state.education,
-    institution: state.institution,
-    subjects: state.subjects
-  }
-}
-
-const mapActionsToProps = dispatch => {
-  return {
-    onChange: (field, value) => {
-      dispatch({ type: field, payload: value })
-    }
-  }
-}
-
-const connector = connect(mapStateToProps, mapActionsToProps)
-
-export default connector(withStyles(styles)(TutorForm))
+export default withStyles(styles)(TutorForm)

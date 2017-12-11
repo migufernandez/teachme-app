@@ -46,10 +46,9 @@ export const createTutor = (data, history) => async (dispatch, getState) => {
   } else {
   }
 }
-export const isActive = async (dispatch, getState) => {
-  const currentData = !isEmpty(getState().tutor.name)
-    ? getState().tutor
-    : getState().editTutor
+export const checkSaveButtonActive = async (dispatch, getState) => {
+  console.log('NEW TUTOR', getState().newTutor)
+  const currentData = getState().newTutor
   const {
     name,
     gender,
@@ -57,13 +56,16 @@ export const isActive = async (dispatch, getState) => {
     email,
     phone,
     shortDesc,
-    imageUrl,
     countryBirth,
     currentCity,
     education,
     institution,
     subjects
   } = currentData
+
+  console.log('isEmpty name', name, isEmpty(name))
+  console.log('isEmpty gender', gender, isEmpty(gender))
+
   if (
     isEmpty(name) ||
     isEmpty(gender) ||
@@ -71,16 +73,17 @@ export const isActive = async (dispatch, getState) => {
     isEmpty(email) ||
     isEmpty(phone) ||
     isEmpty(shortDesc) ||
-    isEmpty(imageUrl) ||
     isEmpty(countryBirth) ||
     isEmpty(currentCity) ||
     isEmpty(education) ||
     isEmpty(institution) ||
     isEmpty(subjects)
   ) {
-    dispatch({ type: IS_ACTIVE, payload: true })
-  } else {
+    console.log('about to turn button disabled')
     dispatch({ type: IS_ACTIVE, payload: false })
+  } else {
+    console.log('about to turn button enabled')
+    dispatch({ type: IS_ACTIVE, payload: true })
   }
 }
 

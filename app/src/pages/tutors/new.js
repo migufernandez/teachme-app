@@ -5,7 +5,7 @@ import TutorForm from '../../components/tutorForm'
 import { connect } from 'react-redux'
 import {
   createTutor,
-  isActive,
+  checkSaveButtonActive,
   setTutors,
   updateNewForm
 } from '../../action-creators/tutors'
@@ -14,17 +14,20 @@ class NewTutor extends React.Component {
   componentDidMount() {}
 
   render() {
+    console.log('NEW FORM IS ACTIVE', this.props.isActive)
     return (
       <div>
         <MenuAppBar title="Add Tutor" goBack {...this.props} />
         <TutorForm
+          isActive={this.props.isActive}
+          onChange={this.props.onChange}
           newTutor={this.props.newTutor}
           onSubmit={this.props.onSubmit(
             this.props.newTutor,
             this.props.history
           )}
-          isActive={this.props.isActive}
-          categories={this.props.tutors}
+          checkSaveButtonActive={this.props.checkSaveButtonActive}
+          tutors={this.props.tutors}
         />
       </div>
     )
@@ -43,7 +46,7 @@ const mapActionsToProps = dispatch => {
   return {
     onChange: (field, value) => {
       dispatch(updateNewForm(field, value))
-      dispatch(isActive)
+      dispatch(checkSaveButtonActive)
     },
     onSubmit: (data, history) => e => {
       dispatch(createTutor(data, history))
@@ -51,7 +54,7 @@ const mapActionsToProps = dispatch => {
     onMount: () => {
       dispatch(setTutors)
     },
-    isSubmitActive: () => dispatch(isActive)
+    checkSaveButtonActive: () => dispatch(checkSaveButtonActive)
   }
 }
 
