@@ -18,6 +18,7 @@ const App = props => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/company" component={Company} />
+
           <Route exact path="/subjects" component={Subjects} />
           <Route exact path="/subjects/:id" component={ShowSubject} />
           <Route path="/departments" component={Departments} />
@@ -26,8 +27,8 @@ const App = props => {
             path="/subjects/department/:department"
             component={Subjects}
           />
-          <Route exact path="/tutors" component={Tutors} />
 
+          <Route exact path="/tutors" component={Tutors} />
           <Route exact path="/tutors/new" component={NewTutor} />
           <Route exact path="/tutors/:id" component={ShowTutor} />
           <Route exact path="/tutors/subjects/:id" component={Tutors} />

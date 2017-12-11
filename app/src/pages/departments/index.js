@@ -74,7 +74,7 @@ Departments.propTypes = {
 
 const mapStateToProps = state => {
   console.log('STATE', state)
-  return { subjects: state.subjects, title: state.subjectListTitle }
+  return { subjects: state.allSubjects, title: state.subjectListTitle }
 }
 
 const mapActionsToProps = dispatch => {
