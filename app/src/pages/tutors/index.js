@@ -7,20 +7,9 @@ import List from 'material-ui/List'
 import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
 import { Link } from 'react-router-dom'
-import {
-  map,
-  sortBy,
-  prop,
-  propOr,
-  pathOr,
-  filter,
-  pluck,
-  contains
-} from 'ramda'
+import { map, propOr, pathOr, filter, pluck, contains } from 'ramda'
 import { setTutors } from '../../action-creators/tutors'
 import { connect } from 'react-redux'
-
-const sorter = sortBy(prop('name'))
 
 class Tutors extends React.Component {
   componentDidMount() {
@@ -28,8 +17,6 @@ class Tutors extends React.Component {
     this.props.onMount()
   }
   render() {
-    const { classes } = this.props
-
     const filterBySubject = pathOr(
       'no filter',
       ['match', 'params', 'id'],
@@ -52,16 +39,31 @@ class Tutors extends React.Component {
       <div>
         <MenuAppBar title="TutorMe" />
         <List style={{ paddingTop: 60, paddingBottom: 50 }}>
-          {map(
-            tutor => <TutorItem key={tutor._id} tutor={tutor} />,
-            displayedTutors
-          )}
+          {
+            (this.props.onMount(),
+            map(
+              tutor => <TutorItem key={tutor._id} tutor={tutor} />,
+              displayedTutors
+            ))
+          }
         </List>
-        <Link to="/tutors/new">
-          <Button fab color="primary" aria-label="add" className="fab-button">
-            <AddIcon />
-          </Button>
-        </Link>
+        {!pathOr(false, ['id'], this.props.match.params) && (
+          <div
+            style={{ paddingBottom: '55px', position: 'fixed', right: '20px' }}
+          >
+            <Link to="/tutors/new">
+              <Button
+                fab
+                color="primary"
+                aria-label="add"
+                className="fab-button"
+              >
+                <AddIcon />
+              </Button>
+            </Link>
+          </div>
+        )}
+
         <SimpleBottomNavigation />
       </div>
     )

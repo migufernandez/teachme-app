@@ -7,9 +7,6 @@ import BottomNavigation, {
 import HomeIcon from 'material-ui-icons/Home'
 import FaceIcon from 'material-ui-icons/Face'
 import RecordVoiceOverIcon from 'material-ui-icons/RecordVoiceOver'
-import FolderIcon from 'material-ui-icons/Folder'
-import BookmarkIcon from 'material-ui-icons/Bookmark'
-import { Link } from 'react-router-dom'
 import history from '../history'
 
 const styles = {

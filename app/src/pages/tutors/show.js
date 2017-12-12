@@ -24,7 +24,7 @@ class ShowTutor extends React.Component {
     if (this.props.match.params.id === currentID) {
       return (
         <div>
-          <MenuAppBar title="TutorMe" goBack={'/tutors'} {...this.props} />
+          <MenuAppBar title="TutorMe" goBack {...this.props} />
           <TutorCard />
         </div>
       )

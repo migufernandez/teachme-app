@@ -7,24 +7,11 @@ import Card, {
   CardMedia,
   CardHeader
 } from 'material-ui/Card'
-import {
-  compose,
-  toUpper,
-  slice,
-  join,
-  split,
-  toLower,
-  pathOr,
-  map
-} from 'ramda'
-import Avatar from 'material-ui/Avatar'
-import { ListItemAvatar } from 'material-ui/List'
-import Icon from 'material-ui/Icon'
+import { compose, toUpper, join, split, toLower, pathOr, map } from 'ramda'
 import IconButton from 'material-ui/IconButton'
 import CallIcon from 'material-ui-icons/Call'
 import SmsIcon from 'material-ui-icons/Sms'
 import EmailIcon from 'material-ui-icons/Email'
-
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import Typography from 'material-ui/Typography'
 import withDrawer from '../components/withDrawer'
@@ -62,6 +49,7 @@ class TutorCard extends React.Component {
 
   render() {
     console.log('this', this.props)
+    const open = Boolean(this.props.anchorEl)
     const { classes } = this.props
     return (
       <div>
@@ -73,14 +61,38 @@ class TutorCard extends React.Component {
             subheader={this.props.name.currentCity}
           />
           <CardActions>
-            <IconButton className={classes.button} aria-label="Call">
-              <CallIcon />
+            <IconButton
+              className={classes.button}
+              aria-label="Call"
+              anchorEl={this.props.anchorEl}
+              open={open}
+              onRequestClose={this.handleRequestClose}
+            >
+              <CallIcon
+                onClick={event => {
+                  event.stopPropagation()
+                  window.open('tel:' + this.props.phone)
+                  this.handleRequestClose()
+                }}
+              />
             </IconButton>
             <IconButton className={classes.button} aria-label="Email">
-              <EmailIcon />
+              <EmailIcon
+                onClick={event => {
+                  event.stopPropagation()
+                  window.open('email:' + this.props.phone)
+                  this.handleRequestClose()
+                }}
+              />
             </IconButton>
             <IconButton className={classes.button} aria-label="SMS">
-              <SmsIcon />
+              <SmsIcon
+                onClick={event => {
+                  event.stopPropagation()
+                  window.open('tel:' + this.props.phone)
+                  this.handleRequestClose()
+                }}
+              />
             </IconButton>
           </CardActions>
           <CardContent>

@@ -6,7 +6,6 @@ import {
   IS_ACTIVE,
   UPDATE_NEW_TUTOR_FORM
 } from '../constants'
-import history from '../history'
 import { isEmpty } from 'ramda'
 const url = process.env.REACT_APP_BASE_URL
 
@@ -23,29 +22,23 @@ export const setCurrentTutor = id => async (dispatch, getState) => {
   })
 }
 
-export const createTutor = (data, history) => async (dispatch, getState) => {
-  if (!window.localStorage.getItem('access_token')) {
-    return dispatch({ type: ERROR, payload: 'Could not add tutor' })
-  }
-  const headers = {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${window.localStorage.getItem('access_token')}`
-  }
-  const method = 'POST'
-  const body = JSON.stringify(data)
-
-  const result = await fetch(`${url}/tutors`, {
-    headers,
+const getOptions = (token, method = 'GET', body = null) => {
+  return {
     method,
-    body
-  }).then(res => res.json())
-
-  if (!result.ok) {
-    dispatch(setTutors)
-    history.push('/tutors')
-  } else {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer' + token
+    },
+    body: body && JSON.stringify(body)
   }
 }
+
+export const createTutor = (dispatch, getState) => {
+  fetch(url + '/tutors', getOptions(getState(), 'POST', getState().newTutor))
+    .then(res => res.json())
+    .catch(err => console.log('ERROR', err))
+}
+
 export const checkSaveButtonActive = async (dispatch, getState) => {
   console.log('NEW TUTOR', getState().newTutor)
   const currentData = getState().newTutor

@@ -11,7 +11,10 @@ import {
 } from '../../action-creators/tutors'
 
 class NewTutor extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.onMount()
+    this.props.checkSaveButtonActive()
+  }
 
   render() {
     console.log('NEW FORM IS ACTIVE', this.props.isActive)
@@ -49,7 +52,7 @@ const mapActionsToProps = dispatch => {
       dispatch(checkSaveButtonActive)
     },
     onSubmit: (data, history) => e => {
-      dispatch(createTutor(data, history))
+      dispatch(createTutor), history.push('/tutors')
     },
     onMount: () => {
       dispatch(setTutors)

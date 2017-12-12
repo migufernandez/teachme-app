@@ -43,6 +43,7 @@ export const newTutor = (state = newTutorDefault, action) => {
       console.log('UPDATE_NEW_TUTOR_FORM', action.payload)
       return merge(state, action.payload)
     case SET_TUTORS:
+      console.log('newTutorDefault', newTutorDefault)
       return newTutorDefault
     default:
       return state
@@ -50,7 +51,6 @@ export const newTutor = (state = newTutorDefault, action) => {
 }
 
 export const isActive = (state = false, action) => {
-  console.log('isActive REDUCER', state)
   switch (action.type) {
     case IS_ACTIVE:
       console.log('IS_ACTIVE', action.payload)

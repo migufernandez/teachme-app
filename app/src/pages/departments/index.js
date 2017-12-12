@@ -10,7 +10,7 @@ import withDrawer from '../../components/withDrawer'
 // import InfoIcon from 'material-ui-icons/Info'
 
 import { connect } from 'react-redux'
-import { propOr, compose, uniq, map, pluck } from 'ramda'
+import { propOr, compose, uniq, map } from 'ramda'
 import { setSubjects } from '../../action-creators/subjects'
 
 const styles = theme => ({

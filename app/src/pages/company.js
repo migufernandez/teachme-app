@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import withDrawer from '../components/withDrawer'
 import MenuAppBar from '../components/menuAppBar'
