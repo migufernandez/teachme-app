@@ -13,8 +13,6 @@ import { connect } from 'react-redux'
 import { propOr, compose, uniq, map, pluck } from 'ramda'
 import { setSubjects } from '../../action-creators/subjects'
 
-//import SubjectGridListTile from '../../component/subjectGridListTile'
-
 const styles = theme => ({
   container: {
     display: 'flex',
@@ -25,7 +23,8 @@ const styles = theme => ({
   },
   gridList: {
     height: '100vh',
-    paddingBottom: theme.spacing.unit * 15
+    paddingBottom: theme.spacing.unit * 10,
+    paddingTop: theme.spacing.unit * 8
   }
 })
 
@@ -46,7 +45,7 @@ class Departments extends React.Component {
         <MenuAppBar title="TutorMe" />
         <GridList cellHeight={180} className={classes.gridList}>
           <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-            <Subheader component="div">{'Departments'}</Subheader>
+            <Subheader component="div">{'SELECT A DEPARTMENT'}</Subheader>
           </GridListTile>
           {map(
             department => (

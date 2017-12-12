@@ -6,14 +6,10 @@ import Subheader from 'material-ui/List/ListSubheader'
 import SimpleBottomNavigation from '../../components/bottomNavigation'
 import MenuAppBar from '../../components/menuAppBar'
 import withDrawer from '../../components/withDrawer'
-// import IconButton from 'material-ui/IconButton'
-// import InfoIcon from 'material-ui-icons/Info'
 
 import { connect } from 'react-redux'
 import { map, propOr, pathOr, filter } from 'ramda'
 import { setSubjects } from '../../action-creators/subjects'
-
-//import SubjectGridListTile from '../../component/subjectGridListTile'
 
 const styles = theme => ({
   container: {
@@ -25,7 +21,9 @@ const styles = theme => ({
   },
   gridList: {
     width: 'auto',
-    height: 'auto'
+    height: 'auto',
+    paddingBottom: theme.spacing.unit * 10,
+    paddingTop: theme.spacing.unit * 8
   }
 })
 

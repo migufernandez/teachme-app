@@ -20,7 +20,7 @@ const styles = theme => ({
   },
   firstButton: {
     marginLeft: -12,
-    marginRight: 12
+    marginRight: 0
   },
   lastButton: {
     marginLeft: 12,
@@ -37,7 +37,11 @@ const MenuAppBar = props => {
           <Typography type="title" color="inherit" className={classes.flex}>
             {props.title}
           </Typography>
-          <IconButton color="contrast" aria-label="Search">
+          <IconButton
+            className={classes.lastButton}
+            color="contrast"
+            aria-label="Search"
+          >
             <SearchIcon />
           </IconButton>
           <IconButton

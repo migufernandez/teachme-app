@@ -9,7 +9,7 @@ export const allSubjects = (state = [], action) => {
   }
 }
 
-export const subjectListTitle = (state = 'All Subjects', action) => {
+export const subjectListTitle = (state = 'SELECT A SUBJECT', action) => {
   switch (action.type) {
     case SET_TITLE:
       return action.payload
