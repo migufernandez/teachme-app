@@ -60,41 +60,43 @@ class TutorCard extends React.Component {
             title={firstLetterUpper(this.tutorName())}
             subheader={this.props.name.currentCity}
           />
-          <CardActions>
-            <IconButton
-              className={classes.button}
-              aria-label="Call"
-              anchorEl={this.props.anchorEl}
-              open={open}
-              onRequestClose={this.handleRequestClose}
-            >
-              <CallIcon
-                onClick={event => {
-                  event.stopPropagation()
-                  window.open('tel:' + this.props.phone)
-                  this.handleRequestClose()
-                }}
-              />
-            </IconButton>
-            <IconButton className={classes.button} aria-label="Email">
-              <EmailIcon
-                onClick={event => {
-                  event.stopPropagation()
-                  window.open('email:' + this.props.phone)
-                  this.handleRequestClose()
-                }}
-              />
-            </IconButton>
-            <IconButton className={classes.button} aria-label="SMS">
-              <SmsIcon
-                onClick={event => {
-                  event.stopPropagation()
-                  window.open('tel:' + this.props.phone)
-                  this.handleRequestClose()
-                }}
-              />
-            </IconButton>
-          </CardActions>
+          <div>
+            <CardActions>
+              <IconButton
+                className={classes.button}
+                aria-label="Call"
+                anchorEl={this.props.anchorEl}
+                open={open}
+                onRequestClose={this.handleRequestClose}
+              >
+                <CallIcon
+                  onClick={event => {
+                    event.stopPropagation()
+                    window.open('tel:' + this.props.phone)
+                    this.handleRequestClose()
+                  }}
+                />
+              </IconButton>
+              <IconButton className={classes.button} aria-label="Email">
+                <EmailIcon
+                  onClick={event => {
+                    event.stopPropagation()
+                    window.open('email:' + this.props.phone)
+                    this.handleRequestClose()
+                  }}
+                />
+              </IconButton>
+              <IconButton className={classes.button} aria-label="SMS">
+                <SmsIcon
+                  onClick={event => {
+                    event.stopPropagation()
+                    window.open('tel:' + this.props.phone)
+                    this.handleRequestClose()
+                  }}
+                />
+              </IconButton>
+            </CardActions>
+          </div>
           <CardContent>
             <Typography type="headline" component="h1">
               Description

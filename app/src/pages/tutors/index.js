@@ -49,7 +49,11 @@ class Tutors extends React.Component {
         </List>
         {!pathOr(false, ['id'], this.props.match.params) && (
           <div
-            style={{ paddingBottom: '55px', position: 'fixed', right: '20px' }}
+            style={{
+              paddingBottom: '55px',
+              position: 'fixed',
+              right: '20px'
+            }}
           >
             <Link to="/tutors/new">
               <Button
