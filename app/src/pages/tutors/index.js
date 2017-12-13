@@ -50,7 +50,7 @@ class Tutors extends React.Component {
         {!pathOr(false, ['id'], this.props.match.params) && (
           <div
             style={{
-              paddingBottom: '55px',
+              bottom: '63px',
               position: 'fixed',
               right: '20px'
             }}

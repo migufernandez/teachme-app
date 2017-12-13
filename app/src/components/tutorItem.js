@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { ListItem, ListItemText, ListItemAvatar } from 'material-ui/List'
 import Avatar from 'material-ui/Avatar'
 import Divider from 'material-ui/Divider'
-import { compose, map, split, toLower, join, toUpper } from 'ramda'
+import { compose, map, split, toLower, join, toUpper, pathOr } from 'ramda'
 
 const firstLetterUpper = string =>
   compose(
@@ -22,9 +22,16 @@ const TutorItem = ({ tutor, history }) => {
           history.push(`/tutors/${tutor._id}`)
         }}
       >
-        <ListItemAvatar>
-          <Avatar src={tutor.imageUrl} />
-        </ListItemAvatar>
+        {pathOr(false, ['imageUrl'], tutor) && (
+          <ListItemAvatar>
+            <Avatar src={tutor.imageUrl} />
+          </ListItemAvatar>
+        )}
+        {!pathOr(false, ['imageUrl'], tutor) && (
+          <ListItemAvatar>
+            <Avatar>{firstLetterUpper(tutor.name).substring(0, 1)} </Avatar>
+          </ListItemAvatar>
+        )}
         <ListItemText
           primary={firstLetterUpper(tutor.name)}
           secondary={firstLetterUpper(tutor.institution)}
