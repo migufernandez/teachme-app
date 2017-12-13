@@ -49,7 +49,6 @@ class TutorCard extends React.Component {
 
   render() {
     console.log('this', this.props)
-    const open = Boolean(this.props.anchorEl)
     const { classes } = this.props
     return (
       <div>
@@ -62,39 +61,21 @@ class TutorCard extends React.Component {
           />
           <div>
             <CardActions>
-              <IconButton
-                className={classes.button}
-                aria-label="Call"
-                anchorEl={this.props.anchorEl}
-                open={open}
-                onRequestClose={this.handleRequestClose}
-              >
-                <CallIcon
-                  onClick={event => {
-                    event.stopPropagation()
-                    window.open('tel:' + this.props.phone)
-                    this.handleRequestClose()
-                  }}
-                />
-              </IconButton>
-              <IconButton className={classes.button} aria-label="Email">
-                <EmailIcon
-                  onClick={event => {
-                    event.stopPropagation()
-                    window.open('email:' + this.props.phone)
-                    this.handleRequestClose()
-                  }}
-                />
-              </IconButton>
-              <IconButton className={classes.button} aria-label="SMS">
-                <SmsIcon
-                  onClick={event => {
-                    event.stopPropagation()
-                    window.open('tel:' + this.props.phone)
-                    this.handleRequestClose()
-                  }}
-                />
-              </IconButton>
+              <a href={'tel:' + this.props.phone}>
+                <IconButton className={classes.button} aria-label="Call">
+                  <CallIcon />
+                </IconButton>
+              </a>
+              <a href={'email:' + this.props.email}>
+                <IconButton className={classes.button} aria-label="Email">
+                  <EmailIcon />
+                </IconButton>
+              </a>
+              <a href={'sms:' + this.props.phone}>
+                <IconButton className={classes.button} aria-label="SMS">
+                  <SmsIcon />
+                </IconButton>
+              </a>
             </CardActions>
           </div>
           <CardContent>
