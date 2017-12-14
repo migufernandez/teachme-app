@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
 import Button from 'material-ui/Button'
+import DirectionsIcon from 'material-ui-icons/Directions'
+import IconButton from 'material-ui/IconButton'
 import Typography from 'material-ui/Typography'
 import SimpleBottomNavigation from '../components/bottomNavigation'
 import withDrawer from '../components/withDrawer'
@@ -15,8 +17,8 @@ const styles = {
     paddingBottom: '3em'
   },
   media: {
-    height: '30vh',
-    paddingTop: '48px'
+    height: '35vh',
+    paddingTop: '5px'
   },
   container: {
     flex: 1
@@ -86,6 +88,18 @@ class Company extends React.Component {
               </p>
             </Typography>
           </CardContent>
+          <div className={classes.container}>
+            <CardActions>
+              <a href={this.props.directions}>
+                <IconButton color="primary">
+                  <DirectionsIcon />
+                </IconButton>
+              </a>
+              <Button dense color="primary">
+                Share
+              </Button>
+            </CardActions>
+          </div>
           <CardMedia className={classes.media}>
             <iframe
               title={'TutorMe'}

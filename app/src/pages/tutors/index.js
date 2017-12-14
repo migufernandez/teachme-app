@@ -37,7 +37,7 @@ class Tutors extends React.Component {
 
     return (
       <div>
-        <MenuAppBar title="TutorMe" />
+        <MenuAppBar title="TutorMe" goBack {...this.props} />
         <List style={{ paddingTop: 60, paddingBottom: 50 }}>
           {
             (this.props.onMount(),
