@@ -48,6 +48,7 @@ const postTutorRequiredFieldCheck = checkRequiredFields([
   'currentCity',
   'education',
   'institution',
+  'rate',
   'subjects'
 ])
 
@@ -65,6 +66,7 @@ const putTutorRequiredFieldCheck = checkRequiredFields([
   'currentCity',
   'education',
   'institution',
+  'rate',
   'subjects'
 ])
 
